@@ -6,97 +6,136 @@
   <title>Alfteria | Electrical Tension and Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #020c1b, #051c39);
+      background: linear-gradient(to bottom, #031933, #001328);
       color: #fff;
     }
     header {
       text-align: center;
-      padding: 60px 20px 20px;
+      padding: 40px 20px 10px;
     }
     header img {
-      width: 300px;
-    }
-    section {
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: auto;
+      max-width: 300px;
     }
     h2 {
       text-align: center;
-      color: #ffffff;
-      margin-bottom: 40px;
+      color: #fff;
+      margin: 50px 0 30px;
       font-size: 32px;
     }
     .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: 20px;
-      text-align: center;
+      padding: 0 20px;
     }
-    .services div {
-      background-color: rgba(0, 31, 63, 0.7);
+    .card {
+      background-color: #061c3c;
       padding: 20px;
       border-radius: 12px;
+      text-align: center;
+      width: 200px;
     }
-    .services div img {
-      width: 50px;
-      margin-bottom: 15px;
-    }
-    .services div h3 {
-      color: #00ccff;
+    .card img {
+      width: 40px;
       margin-bottom: 10px;
+    }
+    .card h3 {
+      color: #00bfff;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 14px;
+      color: #ccc;
     }
     .about {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       align-items: center;
-      text-align: center;
+      justify-content: center;
+      padding: 50px 20px;
     }
-    .about img {
-      width: 250px;
-      border-radius: 12px;
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+      max-width: 500px;
+      padding: 20px;
+    }
+    .about-text h2 {
+      text-align: left;
       margin-bottom: 20px;
     }
-    .contact {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .about-text p {
+      font-size: 15px;
+      color: #ccc;
+    }
+    .about-img {
+      flex: 1;
+      min-width: 280px;
       text-align: center;
     }
-    .contact form {
+    .about-img img {
+      width: 220px;
+      border-radius: 8px;
+    }
+    .contact {
+      padding: 40px 20px;
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    .form {
+      flex: 1;
+      min-width: 280px;
       max-width: 400px;
     }
-    input, textarea {
-      padding: 10px;
-      border-radius: 8px;
-      border: none;
-      outline: none;
+    .form h2 {
+      text-align: left;
     }
-    button {
-      background-color: #00ccff;
-      color: #001f3f;
-      padding: 14px;
+    .form input, .form textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 12px;
       border: none;
-      border-radius: 30px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .form button {
+      width: 100%;
+      background-color: #007bff;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
       font-weight: bold;
       cursor: pointer;
     }
+    .info {
+      flex: 1;
+      min-width: 240px;
+      max-width: 300px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #ddd;
+    }
+    .info p {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .info p::before {
+      content: '•';
+      color: #00bfff;
+    }
     footer {
-      background-color: rgba(0, 12, 26, 0.85);
       text-align: center;
       padding: 20px;
-      font-size: 14px;
+      font-size: 13px;
+      background-color: #010d1a;
       color: #aaa;
     }
   </style>
@@ -104,61 +143,62 @@
 <body>
 
 <header>
-  <img src="https://i.imgur.com/WKxAl8C.png" alt="Logo ALFTERIA" />
+  <img src="logo_alfteria.png" alt="Logo Alfteria">
 </header>
 
-<section>
-  <h2>SERVICIOS</h2>
-  <div class="services">
-    <div>
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/high-voltage.png" alt="Alta Tensión"/>
-      <h3>ALTA TENSIÓN</h3>
-      <p>A trabajos de ingenierías eléctricas en alta tensión.</p>
-    </div>
-    <div>
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/electrical.png" alt="Media Tensión"/>
-      <h3>MEDIA TENSIÓN</h3>
-      <p>Nos especializamos en ofrecer soluciones avanzadas.</p>
-    </div>
-    <div>
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/idea.png" alt="Baja Tensión"/>
-      <h3>BAJA TENSIÓN</h3>
-      <p>Rápida y milimétrica ejecución eléctrica para mejoras prácticas.</p>
-    </div>
-    <div>
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/tools.png" alt="Mantenimiento"/>
-      <h3>MANTENIMIENTO</h3>
-      <p>Optimización técnica y mantenimiento especializado.</p>
-    </div>
+<h2>SERVICIOS</h2>
+<div class="services">
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/100/00bfff/electrical.png" alt="Alta Tensión">
+    <h3>ALTA TENSIÓN</h3>
+    <p>A trabajabilidades de ingenierías eléctricas en alta tensión.</p>
   </div>
-</section>
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/100/00bfff/voltage.png" alt="Media Tensión">
+    <h3>MEDIA TENSIÓN</h3>
+    <p>Nos especializamos en ofrecer soluciones avanzadas.</p>
+  </div>
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/100/00bfff/electrical-plug.png" alt="Baja Tensión">
+    <h3>BAJA TENSIÓN</h3>
+    <p>Rápida y milimétrica ejecución eléctrica para mejoras prácticas.</p>
+  </div>
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/100/00bfff/maintenance.png" alt="Mantenimiento">
+    <h3>MANTENIMIENTO</h3>
+    <p>Optimización técnica y mantenimiento especializado.</p>
+  </div>
+</div>
 
-<section class="about">
-  <h2>SOBRE NOSOTROS</h2>
-  <img src="https://i.ibb.co/qgFvCBk/engineer-avatar.jpg" alt="Ingeniero"/>
-  <p style="max-width: 700px;">
-    Confiabilidad y experiencia en ingeniería eléctrica.<br />
-    Nos especializamos en ofrecer soluciones avanzadas y seguras para una amplia gama de necesidades eléctricas.
-  </p>
-</section>
+<div class="about">
+  <div class="about-text">
+    <h2>SOBRE NOSOTROS</h2>
+    <p>Confiabilidad y experiencia en ingeniería eléctrica.<br>Nos especializamos en ofrecer soluciones avanzadas y seguras para una amplia gama de necesidades eléctricas.</p>
+  </div>
+  <div class="about-img">
+    <img src="engineer.jpg" alt="Ingeniero">
+  </div>
+</div>
 
-<section class="contact">
-  <h2>CONTACTO</h2>
-  <form>
-    <input type="text" placeholder="Nombre" required />
-    <input type="email" placeholder="Correo electrónico" required />
-    <textarea rows="4" placeholder="Mensaje"></textarea>
-    <button type="submit">ENVIAR MENSAJE</button>
-  </form>
-  <p style="margin-top: 20px;">
-    📧 info@alfteria.com <br/>
-    📞 +123 456 7890 <br/>
-    📍 Ciudad, País
-  </p>
-</section>
+<div class="contact">
+  <div class="form">
+    <h2>CONTACTO</h2>
+    <form action="mailto:info@alfteria.com" method="post" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="email" name="correo" placeholder="Correo electrónico" required>
+      <textarea name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+      <button type="submit">ENVIAR MENSAJE</button>
+    </form>
+  </div>
+  <div class="info">
+    <p>info@alfteria.com</p>
+    <p>+123 456 7890</p>
+    <p>Ciudad, País</p>
+  </div>
+</div>
 
 <footer>
-  <p>&copy; 2025 ALFTERIA | Aldaan Aldana & Falconi IIE. Todos los derechos reservados.</p>
+  &copy; 2025 ALFTERIA | Aldaan Aldana & Falconi IIE. Todos los derechos reservados.
 </footer>
 
 </body>
