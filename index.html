@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alfteria | Electrical Tension and Engineering</title>
+  <title>Alfteria | Ingeniería Eléctrica</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box;}
@@ -30,7 +30,7 @@
       margin: auto;
       padding: 20px;
     }
-    .services {
+    .services, .projects, .team, .clients {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
@@ -58,54 +58,24 @@
       font-size: 14px;
       color: #cfd8e0;
     }
-    .about {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      align-items: center;
-      margin-top: 40px;
+    .about-text, .contact-form {
+      padding: 20px;
     }
-    .about-text {
-      flex: 1;
-      min-width: 280px;
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: none;
     }
-    .about-text p {
-      font-size: 16px;
-      color: #ccd9e3;
-    }
-    .about-img {
-      flex: 1;
-      min-width: 260px;
-      text-align: center;
-    }
-    .about-img img {
-      width: 220px;
-      border-radius: 10px;
-    }
-    .contact {
-      padding: 40px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-    .buttons {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
+    form button {
+      margin-top: 10px;
       background-color: #00ccff;
       color: #00101f;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    .buttons a:hover {
-      background-color: #009fcc;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
     footer {
       text-align: center;
@@ -133,48 +103,101 @@
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/electrical.png" alt="Media Tensión"/>
       <h3>Media Tensión</h3>
-      <p>Diseño de redes de distribución eléctrica eficientes y seguras.</p>
+      <p>Redes de distribución para sectores industriales y urbanos.</p>
     </div>
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/plug.png" alt="Baja Tensión"/>
       <h3>Baja Tensión</h3>
-      <p>Instalaciones interiores: iluminación, tomacorrientes y fuerza.</p>
+      <p>Instalaciones interiores, iluminación, fuerza y tomacorrientes.</p>
     </div>
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento"/>
       <h3>Mantenimiento</h3>
-      <p>Revisión, reparación y soporte técnico preventivo y correctivo.</p>
+      <p>Soporte preventivo y correctivo de sistemas eléctricos.</p>
     </div>
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/blueprint.png" alt="Diseño"/>
       <h3>Diseño</h3>
-      <p>Elaboración de estudios técnicos y planos eléctricos con altos estándares de calidad y normativa internacional.</p>
+      <p>Planificación técnica, cálculos y elaboración de planos eléctricos.</p>
     </div>
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización"/>
       <h3>Fiscalización</h3>
-      <p>Supervisión técnica y control de calidad durante la ejecución de proyectos eléctricos para garantizar cumplimiento y eficiencia.</p>
+      <p>Supervisión técnica y control de cumplimiento en obra.</p>
     </div>
   </div>
+</section>
 
-  <div class="about">
-    <div class="about-text">
-      <h2>Sobre Nosotros</h2>
-      <p>En <strong>ALFTERIA</strong> combinamos experiencia, precisión y tecnología para resolver desafíos eléctricos complejos. Creamos soluciones eficientes y confiables para industrias, comercios y proyectos urbanos.</p>
+<section class="section">
+  <h2>Proyectos Realizados</h2>
+  <div class="projects">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/engineering.png" alt="Proyecto 1">
+      <h3>Planta Industrial LATAM</h3>
+      <p>Diseño y ejecución de redes de media tensión para planta de producción de alimentos.</p>
     </div>
-    <div class="about-img">
-      <img src="engineer.jpg" alt="Ingeniero">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/building.png" alt="Proyecto 2">
+      <h3>Centro Comercial Quito</h3>
+      <p>Instalaciones de baja tensión, iluminación y fuerza para un mall de 3 niveles.</p>
     </div>
   </div>
+</section>
 
-  <div class="buttons">
-    <a href="https://wa.me/5930992562878" target="_blank">📱 Escribir por WhatsApp</a>
-    <a href="mailto:info@alfteria.com?subject=Consulta%20desde%20la%20web&body=Hola%2C%20me%20gustaría%20recibir%20más%20información..." target="_blank">✉️ Enviar Correo</a>
+<section class="section">
+  <h2>Sobre Nosotros</h2>
+  <div class="about-text">
+    <p>En <strong>ALFTERIA</strong> brindamos soluciones eléctricas con enfoque técnico, cumplimiento normativo y compromiso con la calidad. Nuestro equipo está conformado por profesionales capacitados con experiencia en proyectos industriales, comerciales y urbanos.</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Nuestro Equipo</h2>
+  <div class="team">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/user-male-circle.png" alt="Ingeniero 1">
+      <h3>Ing. Rafael Crespo</h3>
+      <p>Especialista en Alta Tensión con más de 10 años de experiencia.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/user-female-circle.png" alt="Ingeniera 2">
+      <h3>Ing. Soymar Falconi</h3>
+      <p>Diseñadora de sistemas eléctricos y supervisora de obras.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Clientes y Alianzas</h2>
+  <div class="clients">
+    <div class="card">
+      <h3>Promart</h3>
+      <p>Instalaciones eléctricas y soporte técnico en proyectos nacionales.</p>
+    </div>
+    <div class="card">
+      <h3>Ripconciv</h3>
+      <p>Supervisión de calidad en instalaciones de media y baja tensión.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Contáctanos</h2>
+  <div class="contact-form">
+    <form action="#" method="post">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+    <p style="text-align:center; margin-top: 10px;">
+      <a href="portafolio-alfteria.pdf" target="_blank" style="color: #00ccff; text-decoration: underline;">📄 Descargar portafolio</a>
+    </p>
   </div>
 </section>
 
 <footer>
-  &copy; 2025 ALFTERIA
+  &copy; 2025 ALFTERIA | Ingeniería Eléctrica Integral
 </footer>
 
 </body>
