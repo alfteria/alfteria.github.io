@@ -1,190 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALFTERIA | Electrical Tension and Engineering</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alfteria | Electrical Tension and Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0a0f2c url('https://i.ibb.co/wQ3W4kF/particles-bg.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #020c1b, #051c39);
+      color: #fff;
     }
     header {
-      background: rgba(0, 31, 63, 0.85);
-      padding: 50px 20px;
       text-align: center;
+      padding: 60px 20px 20px;
     }
     header img {
-      width: 220px;
+      width: 300px;
     }
-    nav {
-      background-color: rgba(0, 51, 102, 0.9);
-      padding: 15px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: #ffffff;
-      margin: 0 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00ccff;
-    }
-    .section {
-      padding: 80px 20px;
+    section {
+      padding: 50px 20px;
       max-width: 1200px;
       margin: auto;
     }
     h2 {
-      color: #00ccff;
+      text-align: center;
+      color: #ffffff;
       margin-bottom: 40px;
-      text-align: center;
+      font-size: 32px;
     }
-    .services-grid {
+    .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background-color: rgba(16, 32, 64, 0.9);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
       text-align: center;
     }
-    .card:hover {
-      transform: translateY(-8px);
+    .services div {
+      background-color: rgba(0, 31, 63, 0.7);
+      padding: 20px;
+      border-radius: 12px;
     }
-    .card h3 {
+    .services div img {
+      width: 50px;
+      margin-bottom: 15px;
+    }
+    .services div h3 {
       color: #00ccff;
       margin-bottom: 10px;
     }
-    .card p {
-      color: #ccc;
-      font-size: 15px;
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    .card img {
-      width: 60px;
-      margin-bottom: 15px;
+    .about img {
+      width: 250px;
+      border-radius: 12px;
+      margin-bottom: 20px;
     }
-    .about-img {
-      width: 300px;
-      margin: 20px auto;
-      display: block;
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    .button {
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 400px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+    button {
       background-color: #00ccff;
       color: #001f3f;
-      padding: 14px 30px;
+      padding: 14px;
       border: none;
       border-radius: 30px;
-      cursor: pointer;
       font-weight: bold;
-      margin-top: 25px;
-      display: inline-block;
-    }
-    .button:hover {
-      background-color: #0099cc;
+      cursor: pointer;
     }
     footer {
       background-color: rgba(0, 12, 26, 0.85);
-      color: #aaa;
       text-align: center;
-      padding: 30px 20px;
+      padding: 20px;
       font-size: 14px;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
 
-<header data-aos="fade-down">
- <img src="https://i.imgur.com/WKxAl8C.png" alt="Logo ALFTERIA">
+<header>
+  <img src="https://i.imgur.com/WKxAl8C.png" alt="Logo ALFTERIA" />
 </header>
 
-<nav data-aos="fade-down" data-aos-delay="200">
-  <a href="#servicios">Servicios</a>
-  <a href="#sobre">Nosotros</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
-<section id="servicios" class="section" data-aos="fade-up">
-  <h2>Nuestros Servicios</h2>
-  <div class="services-grid">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/high-voltage.png" alt="Alta Tensión">
-      <h3>Diseño de Alta Tensión</h3>
-      <p>Diseño y ejecución de sistemas eléctricos de alta potencia conforme a normativa internacional.</p>
+<section>
+  <h2>SERVICIOS</h2>
+  <div class="services">
+    <div>
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/high-voltage.png" alt="Alta Tensión"/>
+      <h3>ALTA TENSIÓN</h3>
+      <p>A trabajos de ingenierías eléctricas en alta tensión.</p>
     </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/electrical.png" alt="Media Tensión">
-      <h3>Diseño de Media Tensión</h3>
-      <p>Ingeniería de redes eléctricas de media tensión seguras y eficientes para distribución y protección.</p>
+    <div>
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/electrical.png" alt="Media Tensión"/>
+      <h3>MEDIA TENSIÓN</h3>
+      <p>Nos especializamos en ofrecer soluciones avanzadas.</p>
     </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/idea.png" alt="Baja Tensión">
-      <h3>Diseño de Baja Tensión</h3>
-      <p>Tableros, iluminación, tomacorrientes, fuerza y sistemas eléctricos en edificaciones.</p>
+    <div>
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/idea.png" alt="Baja Tensión"/>
+      <h3>BAJA TENSIÓN</h3>
+      <p>Rápida y milimétrica ejecución eléctrica para mejoras prácticas.</p>
     </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/tools.png" alt="Mantenimientos">
-      <h3>Mantenimientos</h3>
-      <p>Correctivos y preventivos en instalaciones industriales y comerciales.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización">
-      <h3>Fiscalización</h3>
-      <p>Supervisión técnica de proyectos eléctricos en ejecución.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/crane.png" alt="Alquiler de Equipos">
-      <h3>Alquiler de Equipos</h3>
-      <p>Equipamiento eléctrico profesional para obras y pruebas técnicas.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/consultation.png" alt="Asesoría Técnica">
-      <h3>Asesoría Técnica</h3>
-      <p>Consultoría experta en normativas, diseño y eficiencia energética.</p>
+    <div>
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/tools.png" alt="Mantenimiento"/>
+      <h3>MANTENIMIENTO</h3>
+      <p>Optimización técnica y mantenimiento especializado.</p>
     </div>
   </div>
 </section>
 
-<section id="sobre" class="section" data-aos="fade-up">
-  <h2>¿Quiénes Somos?</h2>
-  <img class="about-img" src="https://i.ibb.co/qgFvCBk/engineer-avatar.jpg" alt="Ingeniero">
-  <p style="max-width: 700px; margin: auto;">
-    En <strong>ALFTERIA</strong> lideramos la ingeniería eléctrica con visión futurista. Nuestro equipo combina experiencia técnica, asesoría estratégica y soluciones confiables para proyectos industriales, comerciales y urbanos. Elevamos el estándar técnico de cada obra con pasión y compromiso.
+<section class="about">
+  <h2>SOBRE NOSOTROS</h2>
+  <img src="https://i.ibb.co/qgFvCBk/engineer-avatar.jpg" alt="Ingeniero"/>
+  <p style="max-width: 700px;">
+    Confiabilidad y experiencia en ingeniería eléctrica.<br />
+    Nos especializamos en ofrecer soluciones avanzadas y seguras para una amplia gama de necesidades eléctricas.
   </p>
 </section>
 
-<section id="contacto" class="section" data-aos="fade-up">
-  <h2>Contáctanos</h2>
-  <p>¿Deseas una cotización, asesoría o más información?</p>
-  <p><strong>Email:</strong> contacto@alfteria.com</p>
-  <p><strong>WhatsApp:</strong> +593 0992562878</p>
-  <a href="https://wa.me/5930992562878" target="_blank">
-    <span class="button">Enviar Mensaje por WhatsApp</span>
-  </a>
+<section class="contact">
+  <h2>CONTACTO</h2>
+  <form>
+    <input type="text" placeholder="Nombre" required />
+    <input type="email" placeholder="Correo electrónico" required />
+    <textarea rows="4" placeholder="Mensaje"></textarea>
+    <button type="submit">ENVIAR MENSAJE</button>
+  </form>
+  <p style="margin-top: 20px;">
+    📧 info@alfteria.com <br/>
+    📞 +123 456 7890 <br/>
+    📍 Ciudad, País
+  </p>
 </section>
 
 <footer>
-  <p>&copy; 2025 ALFTERIA - Aldana Falconi Tensión Eléctrica e Ingeniería. Todos los derechos reservados.</p>
+  <p>&copy; 2025 ALFTERIA | Aldaan Aldana & Falconi IIE. Todos los derechos reservados.</p>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 
 </body>
 </html>
