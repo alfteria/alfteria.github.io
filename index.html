@@ -4,24 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ALFTERIA | Electrical Tension and Engineering</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
+      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: radial-gradient(circle, #0a0f2c, #001122);
-      color: #f0f0f0;
+      background: radial-gradient(circle at top, #0a0f2c, #001122);
+      color: #ffffff;
     }
     header {
       background: #001f3f;
+      padding: 50px 20px;
       text-align: center;
-      padding: 40px 20px;
     }
     header img {
-      max-width: 220px;
+      width: 200px;
+      border-radius: 12px;
     }
     nav {
       background-color: #003366;
@@ -29,10 +27,10 @@
       text-align: center;
     }
     nav a {
-      color: #f0f0f0;
+      color: #ffffff;
       margin: 0 20px;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: bold;
       transition: color 0.3s;
     }
     nav a:hover {
@@ -40,51 +38,63 @@
     }
     .section {
       padding: 60px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #00ccff;
+      margin-bottom: 30px;
     }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
-      margin-top: 40px;
     }
     .card {
-      background-color: #0f1b3d;
-      border-radius: 10px;
+      background-color: #102040;
+      border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
       transition: transform 0.3s;
+      text-align: center;
     }
     .card:hover {
       transform: translateY(-5px);
     }
     .card h3 {
-      margin-bottom: 10px;
       color: #00ccff;
+      margin-bottom: 10px;
     }
     .card p {
-      font-size: 14px;
-      color: #ddd;
+      color: #ccc;
+      font-size: 15px;
+    }
+    .card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+    .about-img {
+      width: 300px;
+      margin: 20px auto;
+      display: block;
     }
     .button {
       background-color: #00ccff;
       color: #001f3f;
+      padding: 12px 30px;
       border: none;
-      padding: 12px 25px;
-      margin-top: 30px;
       border-radius: 30px;
       cursor: pointer;
       font-weight: bold;
+      margin-top: 20px;
     }
     .button:hover {
-      background-color: #00aacc;
+      background-color: #0099cc;
     }
     footer {
       background-color: #000c1a;
-      text-align: center;
       color: #aaa;
+      text-align: center;
       padding: 30px 20px;
       font-size: 14px;
     }
@@ -93,7 +103,7 @@
 <body>
 
 <header>
-  <img src="logo.jpg" alt="Logo ALFTERIA">
+  <img src="https://i.ibb.co/QjgsCZ7/logo-alfteria.jpg" alt="Logo ALFTERIA">
 </header>
 
 <nav>
@@ -106,42 +116,48 @@
   <h2>Nuestros Servicios</h2>
   <div class="services-grid">
     <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/high-voltage.png" alt="Alta Tensión">
       <h3>Alta Tensión</h3>
-      <p>Diseño e instalación de sistemas eléctricos de alta potencia con estándares internacionales.</p>
+      <p>Diseño e instalación de sistemas eléctricos de alta potencia.</p>
     </div>
     <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/electrical.png" alt="Media Tensión">
       <h3>Media Tensión</h3>
-      <p>Soluciones completas en redes de distribución y protección de media tensión.</p>
+      <p>Redes de distribución y protección eléctrica especializada.</p>
     </div>
     <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/idea.png" alt="Baja Tensión">
       <h3>Baja Tensión</h3>
-      <p>Montaje de tableros, sistemas de iluminación y fuerza para todo tipo de edificaciones.</p>
+      <p>Montaje de tableros, iluminación y fuerza para edificaciones.</p>
     </div>
     <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/tools.png" alt="Mantenimientos">
       <h3>Mantenimientos</h3>
-      <p>Correctivos y preventivos en instalaciones eléctricas industriales y comerciales.</p>
+      <p>Correctivos y preventivos en instalaciones industriales y comerciales.</p>
     </div>
     <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización">
       <h3>Fiscalización</h3>
-      <p>Supervisión técnica especializada de proyectos eléctricos en ejecución.</p>
+      <p>Supervisión técnica de proyectos eléctricos en ejecución.</p>
     </div>
     <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/crane.png" alt="Alquiler de Equipos">
       <h3>Alquiler de Equipos</h3>
-      <p>Equipamiento eléctrico profesional disponible para obras y pruebas técnicas.</p>
+      <p>Equipamiento eléctrico profesional para obras y pruebas técnicas.</p>
     </div>
     <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/consultation.png" alt="Asesoría Técnica">
       <h3>Asesoría Técnica</h3>
-      <p>Consultoría experta en diseño, normativas y eficiencia energética.</p>
+      <p>Consultoría experta en normativas, diseño y eficiencia energética.</p>
     </div>
   </div>
 </section>
 
 <section id="sobre" class="section">
   <h2>¿Quiénes Somos?</h2>
+  <img class="about-img" src="https://i.ibb.co/qgFvCBk/engineer-avatar.jpg" alt="Ingeniero">
   <p style="max-width: 700px; margin: auto;">
-    En <strong>ALFTERIA</strong> nos enfocamos en liderar la ingeniería eléctrica desde la visión de futuro. 
-    Nuestra misión es brindar soluciones confiables, seguras y eficientes que eleven el estándar técnico de cada proyecto. 
-    Combinamos experiencia, tecnología y pasión por la electricidad.
+    En <strong>ALFTERIA</strong> lideramos la ingeniería eléctrica con visión futurista. Nuestro equipo combina experiencia técnica, asesoría estratégica y soluciones confiables para proyectos industriales, comerciales y urbanos. Elevamos el estándar técnico de cada obra con pasión y compromiso.
   </p>
 </section>
 
