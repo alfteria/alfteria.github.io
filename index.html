@@ -6,135 +6,123 @@
   <title>Alfteria | Electrical Tension and Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #031933, #001328);
+      background: linear-gradient(to bottom, #041936, #00101f);
       color: #fff;
     }
     header {
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 50px 20px 20px;
     }
     header img {
       max-width: 300px;
     }
     h2 {
       text-align: center;
-      color: #fff;
-      margin: 50px 0 30px;
+      margin: 40px 0 20px;
       font-size: 32px;
+      color: #00bfff;
+    }
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
     }
     .services {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      padding: 0 20px;
+      margin-top: 20px;
     }
     .card {
-      background-color: #061c3c;
+      background: #06203c;
       padding: 20px;
       border-radius: 12px;
       text-align: center;
-      width: 200px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .card img {
-      width: 40px;
+      width: 50px;
       margin-bottom: 10px;
     }
     .card h3 {
-      color: #00bfff;
+      color: #00ccff;
       margin-bottom: 8px;
     }
     .card p {
       font-size: 14px;
-      color: #ccc;
+      color: #cfd8e0;
     }
     .about {
       display: flex;
       flex-wrap: wrap;
+      gap: 20px;
       align-items: center;
-      justify-content: center;
-      padding: 50px 20px;
+      margin-top: 40px;
     }
     .about-text {
       flex: 1;
       min-width: 280px;
-      max-width: 500px;
-      padding: 20px;
-    }
-    .about-text h2 {
-      text-align: left;
-      margin-bottom: 20px;
     }
     .about-text p {
-      font-size: 15px;
-      color: #ccc;
+      font-size: 16px;
+      color: #ccd9e3;
     }
     .about-img {
       flex: 1;
-      min-width: 280px;
+      min-width: 260px;
       text-align: center;
     }
     .about-img img {
       width: 220px;
-      border-radius: 8px;
+      border-radius: 10px;
     }
     .contact {
-      padding: 40px 20px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
+      justify-content: space-between;
+      gap: 30px;
+      margin-top: 40px;
     }
     .form {
       flex: 1;
       min-width: 280px;
-      max-width: 400px;
-    }
-    .form h2 {
-      text-align: left;
     }
     .form input, .form textarea {
       width: 100%;
-      margin-bottom: 10px;
       padding: 12px;
+      margin-bottom: 10px;
       border: none;
-      border-radius: 8px;
-      font-size: 14px;
+      border-radius: 6px;
     }
     .form button {
       width: 100%;
-      background-color: #007bff;
-      color: #fff;
       padding: 12px;
+      background: #00bfff;
+      color: #00111f;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       font-weight: bold;
       cursor: pointer;
     }
     .info {
       flex: 1;
       min-width: 240px;
-      max-width: 300px;
       font-size: 15px;
-      line-height: 1.8;
-      color: #ddd;
+      color: #ccc;
     }
     .info p {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .info p::before {
-      content: '•';
-      color: #00bfff;
+      margin: 10px 0;
     }
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 13px;
+      font-size: 14px;
       background-color: #010d1a;
       color: #aaa;
     }
@@ -146,56 +134,59 @@
   <img src="logo_alfteria.png" alt="Logo Alfteria">
 </header>
 
-<h2>SERVICIOS</h2>
-<div class="services">
-  <div class="card">
-    <img src="https://img.icons8.com/ios-filled/100/00bfff/electrical.png" alt="Alta Tensión">
-    <h3>ALTA TENSIÓN</h3>
-    <p>A trabajabilidades de ingenierías eléctricas en alta tensión.</p>
+<section class="section">
+  <h2>Servicios</h2>
+  <div class="services">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/high-voltage.png" alt="Alta Tensión"/>
+      <h3>Alta Tensión</h3>
+      <p>Soluciones en sistemas de transmisión eléctrica de alta potencia.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/electrical.png" alt="Media Tensión"/>
+      <h3>Media Tensión</h3>
+      <p>Diseño de redes de distribución eléctrica eficientes y seguras.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/plug.png" alt="Baja Tensión"/>
+      <h3>Baja Tensión</h3>
+      <p>Instalaciones interiores: iluminación, tomacorrientes y fuerza.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento"/>
+      <h3>Mantenimiento</h3>
+      <p>Revisión, reparación y soporte técnico preventivo y correctivo.</p>
+    </div>
   </div>
-  <div class="card">
-    <img src="https://img.icons8.com/ios-filled/100/00bfff/voltage.png" alt="Media Tensión">
-    <h3>MEDIA TENSIÓN</h3>
-    <p>Nos especializamos en ofrecer soluciones avanzadas.</p>
-  </div>
-  <div class="card">
-    <img src="https://img.icons8.com/ios-filled/100/00bfff/electrical-plug.png" alt="Baja Tensión">
-    <h3>BAJA TENSIÓN</h3>
-    <p>Rápida y milimétrica ejecución eléctrica para mejoras prácticas.</p>
-  </div>
-  <div class="card">
-    <img src="https://img.icons8.com/ios-filled/100/00bfff/maintenance.png" alt="Mantenimiento">
-    <h3>MANTENIMIENTO</h3>
-    <p>Optimización técnica y mantenimiento especializado.</p>
-  </div>
-</div>
 
-<div class="about">
-  <div class="about-text">
-    <h2>SOBRE NOSOTROS</h2>
-    <p>Confiabilidad y experiencia en ingeniería eléctrica.<br>Nos especializamos en ofrecer soluciones avanzadas y seguras para una amplia gama de necesidades eléctricas.</p>
+  <div class="about">
+    <div class="about-text">
+      <h2>Sobre Nosotros</h2>
+      <p>En <strong>ALFTERIA</strong> combinamos experiencia, precisión y tecnología para resolver desafíos eléctricos complejos. Creamos soluciones eficientes y confiables para industrias, comercios y proyectos urbanos.</p>
+    </div>
+    <div class="about-img">
+      <img src="engineer.jpg" alt="Ingeniero">
+    </div>
   </div>
-  <div class="about-img">
-    <img src="engineer.jpg" alt="Ingeniero">
-  </div>
-</div>
 
-<div class="contact">
-  <div class="form">
-    <h2>CONTACTO</h2>
-    <form action="mailto:info@alfteria.com" method="post" enctype="text/plain">
-      <input type="text" name="nombre" placeholder="Nombre" required>
-      <input type="email" name="correo" placeholder="Correo electrónico" required>
-      <textarea name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
-      <button type="submit">ENVIAR MENSAJE</button>
-    </form>
+  <div class="contact">
+    <div class="form">
+      <h2>Contacto</h2>
+      <form action="mailto:info@alfteria.com" method="post" enctype="text/plain">
+        <input type="text" name="nombre" placeholder="Nombre" required />
+        <input type="email" name="correo" placeholder="Correo electrónico" required />
+        <textarea name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+    <div class="info">
+      <h2>Información</h2>
+      <p>📧 info@alfteria.com</p>
+      <p>📞 +123 456 7890</p>
+      <p>📍 Ciudad, País</p>
+    </div>
   </div>
-  <div class="info">
-    <p>info@alfteria.com</p>
-    <p>+123 456 7890</p>
-    <p>Ciudad, País</p>
-  </div>
-</div>
+</section>
 
 <footer>
   &copy; 2025 ALFTERIA | Aldaan Aldana & Falconi IIE. Todos los derechos reservados.
