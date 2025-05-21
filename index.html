@@ -5,26 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ALFTERIA | Electrical Tension and Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: radial-gradient(circle at top, #0a0f2c, #001122);
+      background: #0a0f2c url('https://i.ibb.co/wQ3W4kF/particles-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #ffffff;
     }
     header {
-      background: #001f3f;
+      background: rgba(0, 31, 63, 0.85);
       padding: 50px 20px;
       text-align: center;
     }
     header img {
-      width: 200px;
-      border-radius: 12px;
+      width: 220px;
     }
     nav {
-      background-color: #003366;
+      background-color: rgba(0, 51, 102, 0.9);
       padding: 15px 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     nav a {
       color: #ffffff;
@@ -37,13 +41,14 @@
       color: #00ccff;
     }
     .section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       max-width: 1200px;
       margin: auto;
     }
     h2 {
       color: #00ccff;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      text-align: center;
     }
     .services-grid {
       display: grid;
@@ -51,7 +56,7 @@
       gap: 30px;
     }
     .card {
-      background-color: #102040;
+      background-color: rgba(16, 32, 64, 0.9);
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.5);
@@ -59,7 +64,7 @@
       text-align: center;
     }
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
     }
     .card h3 {
       color: #00ccff;
@@ -81,18 +86,19 @@
     .button {
       background-color: #00ccff;
       color: #001f3f;
-      padding: 12px 30px;
+      padding: 14px 30px;
       border: none;
       border-radius: 30px;
       cursor: pointer;
       font-weight: bold;
-      margin-top: 20px;
+      margin-top: 25px;
+      display: inline-block;
     }
     .button:hover {
       background-color: #0099cc;
     }
     footer {
-      background-color: #000c1a;
+      background-color: rgba(0, 12, 26, 0.85);
       color: #aaa;
       text-align: center;
       padding: 30px 20px;
@@ -102,17 +108,17 @@
 </head>
 <body>
 
-<header>
+<header data-aos="fade-down">
   <img src="https://i.ibb.co/vBgbtQ5/logo-alfteria-rayito.jpg" alt="Logo ALFTERIA">
 </header>
 
-<nav>
+<nav data-aos="fade-down" data-aos-delay="200">
   <a href="#servicios">Servicios</a>
   <a href="#sobre">Nosotros</a>
   <a href="#contacto">Contacto</a>
 </nav>
 
-<section id="servicios" class="section">
+<section id="servicios" class="section" data-aos="fade-up">
   <h2>Nuestros Servicios</h2>
   <div class="services-grid">
     <div class="card">
@@ -153,7 +159,7 @@
   </div>
 </section>
 
-<section id="sobre" class="section">
+<section id="sobre" class="section" data-aos="fade-up">
   <h2>¿Quiénes Somos?</h2>
   <img class="about-img" src="https://i.ibb.co/qgFvCBk/engineer-avatar.jpg" alt="Ingeniero">
   <p style="max-width: 700px; margin: auto;">
@@ -161,19 +167,24 @@
   </p>
 </section>
 
-<section id="contacto" class="section">
+<section id="contacto" class="section" data-aos="fade-up">
   <h2>Contáctanos</h2>
   <p>¿Deseas una cotización, asesoría o más información?</p>
   <p><strong>Email:</strong> contacto@alfteria.com</p>
   <p><strong>WhatsApp:</strong> +593 0992562878</p>
   <a href="https://wa.me/5930992562878" target="_blank">
-    <button class="button">Enviar Mensaje por WhatsApp</button>
+    <span class="button">Enviar Mensaje por WhatsApp</span>
   </a>
 </section>
 
 <footer>
   <p>&copy; 2025 ALFTERIA - Aldana Falconi Tensión Eléctrica e Ingeniería. Todos los derechos reservados.</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
