@@ -83,41 +83,29 @@
       border-radius: 10px;
     }
     .contact {
+      padding: 40px 20px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-      margin-top: 40px;
+      justify-content: center;
+      gap: 40px;
     }
-    .form {
-      flex: 1;
-      min-width: 280px;
+    .buttons {
+      text-align: center;
+      margin-top: 30px;
     }
-    .form input, .form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 10px;
-      border: none;
-      border-radius: 6px;
-    }
-    .form button {
-      width: 100%;
-      padding: 12px;
-      background: #00bfff;
-      color: #00111f;
-      border: none;
-      border-radius: 6px;
+    .buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background-color: #00ccff;
+      color: #00101f;
+      text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
-      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-    .info {
-      flex: 1;
-      min-width: 240px;
-      font-size: 15px;
-      color: #ccc;
-    }
-    .info p {
-      margin: 10px 0;
+    .buttons a:hover {
+      background-color: #009fcc;
     }
     footer {
       text-align: center;
@@ -169,28 +157,11 @@
     </div>
   </div>
 
-  <div class="contact">
-    <div class="form">
-      <h2>Contacto</h2>
-      <form action="mailto:info@alfteria.com" method="post" enctype="text/plain">
-        <input type="text" name="nombre" placeholder="Nombre" required />
-        <input type="email" name="correo" placeholder="Correo electrónico" required />
-        <textarea name="mensaje" rows="4" placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar Mensaje</button>
-      </form>
-    </div>
-    <div class="info">
-      <h2>Información</h2>
-      <p>📧 info@alfteria.com</p>
-      <p>📞 +123 456 7890</p>
-      <p>📍 Ciudad, País</p>
-    </div>
+  <div class="buttons">
+    <a href="https://wa.me/5930992562878" target="_blank">📱 Escribir por WhatsApp</a>
+    <a href="mailto:info@alfteria.com?subject=Consulta%20desde%20la%20web&body=Hola%2C%20me%20gustaría%20recibir%20más%20información..." target="_blank">✉️ Enviar Correo</a>
   </div>
 </section>
 
 <footer>
-  &copy; 2025 ALFTERIA | Aldaan Aldana & Falconi IIE. Todos los derechos reservados.
-</footer>
-
-</body>
-</html>
+  &copy; 2025 ALFTERIA
