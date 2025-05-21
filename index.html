@@ -12,6 +12,23 @@
       background: linear-gradient(to bottom, #041936, #00101f);
       color: #fff;
     }
+    nav {
+      background-color: #010d1a;
+      padding: 15px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #00ccff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     header {
       text-align: center;
       padding: 50px 20px 20px;
@@ -88,18 +105,22 @@
 </head>
 <body>
 
+<nav>
+  <a href="#servicios">Servicios</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#equipo">Equipo</a>
+  <a href="#clientes">Clientes</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
 <header>
   <img src="logo_alfteria.png" alt="Logo Alfteria">
 </header>
 
-<section class="section">
+<section id="servicios" class="section">
   <h2>Servicios</h2>
   <div class="services">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/high-voltage.png" alt="Alta Tensión"/>
-      <h3>Alta Tensión</h3>
-      <p>Soluciones en sistemas de transmisión eléctrica de alta potencia.</p>
-    </div>
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/electrical.png" alt="Media Tensión"/>
       <h3>Media Tensión</h3>
@@ -128,7 +149,7 @@
   </div>
 </section>
 
-<section class="section">
+<section id="proyectos" class="section">
   <h2>Proyectos Realizados</h2>
   <div class="projects">
     <div class="card">
@@ -144,20 +165,20 @@
   </div>
 </section>
 
-<section class="section">
+<section id="nosotros" class="section">
   <h2>Sobre Nosotros</h2>
   <div class="about-text">
     <p>En <strong>ALFTERIA</strong> brindamos soluciones eléctricas con enfoque técnico, cumplimiento normativo y compromiso con la calidad. Nuestro equipo está conformado por profesionales capacitados con experiencia en proyectos industriales, comerciales y urbanos.</p>
   </div>
 </section>
 
-<section class="section">
+<section id="equipo" class="section">
   <h2>Nuestro Equipo</h2>
   <div class="team">
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/user-male-circle.png" alt="Ingeniero 1">
-      <h3>Ing. Rafael Crespo</h3>
-      <p>Especialista en Alta Tensión con más de 10 años de experiencia.</p>
+      <h3>Ing. Juan Pablo Barzallo</h3>
+      <p>Especialista en instalaciones eléctricas para obras civiles e industriales.</p>
     </div>
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/user-female-circle.png" alt="Ingeniera 2">
@@ -167,7 +188,7 @@
   </div>
 </section>
 
-<section class="section">
+<section id="clientes" class="section">
   <h2>Clientes y Alianzas</h2>
   <div class="clients">
     <div class="card">
@@ -181,7 +202,7 @@
   </div>
 </section>
 
-<section class="section">
+<section id="contacto" class="section">
   <h2>Contáctanos</h2>
   <div class="contact-form">
     <form action="#" method="post">
