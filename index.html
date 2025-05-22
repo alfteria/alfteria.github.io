@@ -58,7 +58,7 @@
       margin: auto;
       padding: 20px;
     }
-    .services {
+    .services, .projects, .team, .clients {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
@@ -87,6 +87,33 @@
       transition: all 0.3s ease;
     }
     .card.active .info { display: block; }
+    .about-text, .contact-form {
+      padding: 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      background-color: #f0f0f0;
+      color: #000;
+    }
+    form button {
+      margin-top: 15px;
+      background-color: #00ccff;
+      color: #00101f;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #009fcc;
+    }
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -102,6 +129,14 @@
       z-index: 1001;
     }
     .whatsapp-button img { width: 30px; }
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+      background-color: #001425;
+      color: #aaa;
+      border-top: 2px solid #00ccff;
+    }
     @media (max-width: 768px) {
       .services { grid-template-columns: 1fr; }
     }
@@ -112,6 +147,10 @@
 <nav>
   <a href="#"><img src="logo_alfteria.png" alt="Logo Alfteria" style="height: 60px; border-radius: 6px;"></a>
   <a href="#servicios">Servicios</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#equipo">Equipo</a>
+  <a href="#clientes">Clientes</a>
   <a href="#contacto">Contacto</a>
 </nav>
 
@@ -122,54 +161,67 @@
 <section id="servicios" class="section">
   <h2>Servicios</h2>
   <div class="services">
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/blueprint.png" alt="Diseño">
-      <h3>Diseño</h3>
-      <p>Planificación técnica, cálculos y planos.</p>
-      <div class="info">Diagramas unifilares, selección de materiales, normas internacionales.</div>
+    <!-- tarjetas de servicio aquí... -->
+  </div>
+</section>
+
+<section id="proyectos" class="section">
+  <h2>Proyectos Realizados</h2>
+  <div class="projects">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/factory.png" alt="Planta Industrial">
+      <h3>Planta Industrial LATAM</h3>
+      <p>Diseño y ejecución de redes MT para producción alimentaria.</p>
     </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización">
-      <h3>Fiscalización</h3>
-      <p>Supervisión técnica y control de calidad.</p>
-      <div class="info">Revisión de planos, cronogramas, verificación en obra.</div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/shopping-mall.png" alt="Centro Comercial">
+      <h3>Centro Comercial Quito</h3>
+      <p>Instalación completa BT, iluminación y respaldo energético.</p>
     </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942921.png" alt="Media Tensión">
-      <h3>Media Tensión</h3>
-      <p>Redes de distribución y subestaciones.</p>
-      <div class="info">Transformadores, protecciones, acometidas industriales.</div>
+  </div>
+</section>
+
+<section id="nosotros" class="section">
+  <h2>Sobre Nosotros</h2>
+  <div class="about-text">
+    <p><strong>ALFTERIA</strong> es una empresa ecuatoriana especializada en soluciones integrales de ingeniería eléctrica. Nos enfocamos en calidad, seguridad y cumplimiento normativo para ofrecer resultados sobresalientes en cada proyecto.</p>
+  </div>
+</section>
+
+<section id="equipo" class="section">
+  <h2>Nuestro Equipo</h2>
+  <div class="about-text">
+    <p>Contamos con ingenieros y técnicos especializados, comprometidos con soluciones efectivas, sostenibles y adaptadas a cada cliente.</p>
+  </div>
+</section>
+
+<section id="clientes" class="section">
+  <h2>Clientes y Alianzas</h2>
+  <div class="clients">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/company.png" alt="Promart"/>
+      <h3>Promart</h3>
+      <p>Proyectos eléctricos nacionales con enfoque en eficiencia energética.</p>
     </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/smart-home-automation.png" alt="Baja Tensión">
-      <h3>Baja Tensión</h3>
-      <p>Instalaciones interiores y tomas.</p>
-      <div class="info">Iluminación, tableros, respaldo energético.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento">
-      <h3>Mantenimiento</h3>
-      <p>Soporte preventivo y correctivo.</p>
-      <div class="info">Análisis térmicos, verificación de sistemas, planes mensuales.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://cdn-icons-png.flaticon.com/512/8830/8830593.png" alt="Alquiler">
-      <h3>Alquiler de Equipos</h3>
-      <p>Equipos para obras temporales.</p>
-      <div class="info">UPS, bancos de carga, medidores, analizadores de red.</div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/conference-call.png" alt="Ripconciv"/>
+      <h3>Ripconciv</h3>
+      <p>Instalaciones de MT y BT en obras de infraestructura.</p>
     </div>
   </div>
 </section>
 
 <section id="contacto" class="section">
-  <h2>Contacto</h2>
-  <form onsubmit="mostrarGracias(event)">
-    <input type="text" name="nombre" placeholder="Tu nombre" required>
-    <input type="email" name="email" placeholder="Tu correo" required>
-    <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-  <p id="mensajeGracias" style="display:none; color: #00ffcc; font-weight:bold; text-align:center; margin-top:10px;">Gracias por escribirnos. Te responderemos pronto.</p>
+  <h2>Contáctanos</h2>
+  <div class="contact-form">
+    <form onsubmit="mostrarGracias(event)">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="mensajeGracias" style="display:none; color: #00ffcc; font-weight:bold; text-align:center; margin-top:10px;">Gracias por escribirnos. Te responderemos pronto.</p>
+  </div>
 </section>
 
 <a class="whatsapp-button" href="https://wa.me/5930992562878" target="_blank">
