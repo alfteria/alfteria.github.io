@@ -236,99 +236,36 @@
       <img src="https://cdn-icons-png.flaticon.com/512/2942/2942921.png" alt="Media Tensión"/>
       <h3>Media Tensión</h3>
       <p>Redes de distribución para industrias y sectores urbanos.</p>
-      <div class="info">Diseño y montaje de acometidas, subestaciones, protecciones y transformadores.</div>
+      <div class="info">Diseño y montaje de acometidas, subestaciones, protecciones, cableado y transformadores de potencia.</div>
     </div>
     <div class="card" onclick="toggleInfo(this)">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/smart-home-automation.png" alt="Baja Tensión"/>
       <h3>Baja Tensión</h3>
       <p>Instalaciones interiores, iluminación y tomacorrientes.</p>
-      <div class="info">Cableado estructurado, tableros, puntos de fuerza y respaldo UPS.</div>
+      <div class="info">Incluye tomas, iluminación, sistemas de respaldo, tableros eléctricos y protección diferencial.</div>
     </div>
     <div class="card" onclick="toggleInfo(this)">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento"/>
       <h3>Mantenimiento</h3>
       <p>Soporte preventivo y correctivo.</p>
-      <div class="info">Planes periódicos, análisis termográficos y solución de fallas en sistemas eléctricos.</div>
+      <div class="info">Planes periódicos, revisión de conexiones, análisis termográficos y reparación de fallas críticas.</div>
     </div>
     <div class="card" onclick="toggleInfo(this)">
-      <img src="https://cdn-icons-png.flaticon.com/512/8830/8830593.png" alt="Alquiler"/>
+      <img src="https://cdn-icons-png.flaticon.com/512/8830/8830593.png" alt="Alquiler de Equipos"/>
       <h3>Alquiler de Equipos</h3>
       <p>Herramientas y equipos especializados.</p>
-      <div class="info">Disponibilidad de equipos eléctricos para pruebas, respaldo o ejecución temporal.</div>
+      <div class="info">Incluye alquiler de bancos de carga, analizadores de red, medidores de aislamiento, UPS y más.</div>
     </div>
   </div>
 </section>
 
-<section id="proyectos" class="section">
-  <h2>Proyectos Realizados</h2>
-  <div class="projects">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/factory.png" alt="Planta Industrial">
-      <h3>Planta Industrial LATAM</h3>
-      <p>Diseño y ejecución de redes MT para producción alimentaria.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/shopping-mall.png" alt="Centro Comercial">
-      <h3>Centro Comercial Quito</h3>
-      <p>Instalación completa BT, iluminación y respaldo energético.</p>
-    </div>
-  </div>
-</section>
-
-<section id="nosotros" class="section">
-  <h2>Sobre Nosotros</h2>
-  <div class="about-text">
-    <p><strong>ALFTERIA</strong> es una empresa ecuatoriana especializada en soluciones integrales de ingeniería eléctrica. Nos enfocamos en calidad, seguridad y cumplimiento normativo para ofrecer resultados sobresalientes en cada proyecto.</p>
-  </div>
-</section>
-
-<section id="equipo" class="section">
-  <h2>Nuestro Equipo</h2>
-  <div class="about-text">
-    <p>Contamos con ingenieros y técnicos especializados, comprometidos con soluciones efectivas, sostenibles y adaptadas a cada cliente.</p>
-  </div>
-</section>
-
-<section id="clientes" class="section">
-  <h2>Clientes y Alianzas</h2>
-  <div class="clients">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/company.png" alt="Promart"/>
-      <h3>Promart</h3>
-      <p>Proyectos eléctricos nacionales con enfoque en eficiencia energética.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/conference-call.png" alt="Ripconciv"/>
-      <h3>Ripconciv</h3>
-      <p>Instalaciones de MT y BT en obras de infraestructura.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contacto" class="section">
-  <h2>Contáctanos</h2>
-  <div class="contact-form">
-    <form onsubmit="mostrarGracias(event)">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo" required>
-      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-    </form>
-    <p id="mensajeGracias" style="display: none; text-align: center; margin-top: 15px; color: #00ffcc; font-weight: bold;">✅ Gracias por contactarnos. Te responderemos pronto.</p>
-    <p style="text-align:center; margin-top: 10px;">
-      <a href="portafolio-alfteria.pdf" target="_blank" style="color: #00ccff; text-decoration: underline;">📄 Descargar portafolio</a>
-    </p>
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 ALFTERIA | Ingeniería Eléctrica Integral
-</footer>
+<!-- Puedes mantener aquí las otras secciones: proyectos, nosotros, equipo, clientes, contacto, etc. -->
 
 <script>
   function toggleInfo(card) {
     card.classList.toggle('active');
   }
+
   function mostrarGracias(e) {
     e.preventDefault();
     document.getElementById('mensajeGracias').style.display = 'block';
