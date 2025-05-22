@@ -96,7 +96,7 @@
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      cursor: default;
+      cursor: pointer;
     }
 
     .card:hover {
@@ -121,19 +121,8 @@
       color: #cfd8e0;
     }
 
-    .card button {
-      margin-top: 10px;
-      padding: 8px 15px;
-      border: none;
-      border-radius: 6px;
-      background-color: #00ccff;
-      color: #00101f;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .card button:hover {
-      background-color: #009fcc;
+    .card.active .info {
+      display: block !important;
     }
 
     .about-text, .contact-form {
@@ -248,11 +237,10 @@
 <section id="servicios" class="section">
   <h2>Servicios</h2>
   <div class="services">
-    <div class="card">
+    <div class="card" onclick="toggleInfo(this)">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/blueprint.png" alt="Diseño"/>
       <h3>Diseño</h3>
       <p>Planificación técnica, cálculos y elaboración de planos eléctricos.</p>
-      <button onclick="mostrarMas(this)">+ Info</button>
       <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
         Incluye estudios de carga, diagramas unifilares, especificaciones de equipos y selección de materiales conforme a normas internacionales.
       </div>
@@ -261,62 +249,100 @@
       <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización"/>
       <h3>Fiscalización</h3>
       <p>Supervisión técnica y control de cumplimiento en obra.</p>
-      <button onclick="mostrarMas(this)">+ Info</button>
-      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
-        Validación de planos, control de calidad de instalación, verificación de pruebas eléctricas y conformidad normativa.
-      </div>
     </div>
     <div class="card">
       <img src="https://cdn-icons-png.flaticon.com/512/2942/2942921.png" alt="Media Tensión"/>
       <h3>Media Tensión</h3>
       <p>Redes de distribución para sectores industriales y urbanos.</p>
-      <button onclick="mostrarMas(this)">+ Info</button>
-      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
-        Diseño e instalación de subestaciones, líneas aéreas o subterráneas y protecciones acorde a la normativa IEC y RETIE.
-      </div>
     </div>
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/smart-home-automation.png" alt="Baja Tensión"/>
       <h3>Baja Tensión</h3>
       <p>Instalaciones interiores, iluminación, fuerza y tomacorrientes.</p>
-      <button onclick="mostrarMas(this)">+ Info</button>
-      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
-        Sistemas eléctricos para viviendas, oficinas y locales, integrando eficiencia energética, protección y estética.
-      </div>
     </div>
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento"/>
       <h3>Mantenimiento</h3>
       <p>Soporte preventivo y correctivo de sistemas eléctricos.</p>
-      <button onclick="mostrarMas(this)">+ Info</button>
-      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
-        Diagnóstico de fallas, mediciones eléctricas, cambios de componentes y mantenimiento programado de equipos.
-      </div>
     </div>
     <div class="card">
       <img src="https://cdn-icons-png.flaticon.com/512/8830/8830593.png" alt="Alquiler de Equipos"/>
       <h3>Alquiler de Equipos</h3>
       <p>Disponibilidad de equipos eléctricos y herramientas especializadas para proyectos temporales.</p>
-      <button onclick="mostrarMas(this)">+ Info</button>
-      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
-        Equipos certificados disponibles por día o semana: analizadores, transformadores portátiles, torres de iluminación y más.
-      </div>
     </div>
   </div>
 </section>
 
-<!-- Puedes mantener tus demás secciones igual: proyectos, nosotros, equipo, clientes, contacto, footer -->
+<section id="proyectos" class="section">
+  <h2>Proyectos Realizados</h2>
+  <div class="projects">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/factory.png" alt="Planta Industrial">
+      <h3>Planta Industrial LATAM</h3>
+      <p>Diseño y ejecución de redes de media tensión para planta de producción de alimentos en zona industrial.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/shopping-mall.png" alt="Centro Comercial">
+      <h3>Centro Comercial Quito</h3>
+      <p>Instalaciones completas de baja tensión, iluminación y respaldo energético para infraestructura comercial.</p>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros" class="section">
+  <h2>Sobre Nosotros</h2>
+  <div class="about-text">
+    <p><strong>ALFTERIA</strong> es una empresa ecuatoriana especializada en soluciones integrales de ingeniería eléctrica. Nuestro compromiso con la calidad, la innovación y el cumplimiento normativo nos permite ejecutar proyectos de alto impacto técnico en sectores industriales, comerciales y residenciales.</p>
+    <p>Contamos con un equipo multidisciplinario que garantiza el desarrollo de propuestas sólidas desde el diseño hasta la implementación final.</p>
+  </div>
+</section>
+
+<section id="equipo" class="section">
+  <h2>Nuestro Equipo</h2>
+  <div class="about-text">
+    <p>En <strong>ALFTERIA</strong> contamos con profesionales altamente capacitados y con amplia experiencia en ingeniería eléctrica. Nuestro equipo combina conocimientos técnicos, compromiso y una visión integral para brindar soluciones eficientes y seguras a cada uno de nuestros clientes.</p>
+  </div>
+</section>
+
+<section id="clientes" class="section">
+  <h2>Clientes y Alianzas</h2>
+  <div class="clients">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/company.png" alt="Cliente Promart"/>
+      <h3>Promart</h3>
+      <p>Colaboración en proyectos eléctricos a nivel nacional, cumpliendo altos estándares técnicos y de eficiencia energética.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/conference-call.png" alt="Cliente Ripconciv"/>
+      <h3>Ripconciv</h3>
+      <p>Supervisión de instalaciones de media y baja tensión en proyectos de infraestructura de gran escala.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="section">
+  <h2>Contáctanos</h2>
+  <div class="contact-form">
+    <form action="#" method="post" onsubmit="mostrarGracias(event)">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo" required>
+      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+    <p id="mensajeGracias" style="display: none; text-align: center; margin-top: 15px; color: #00ffcc; font-weight: bold;">✅ Gracias por contactarnos. Te responderemos pronto.</p>
+    <p style="text-align:center; margin-top: 10px;">
+      <a href="portafolio-alfteria.pdf" target="_blank" style="color: #00ccff; text-decoration: underline;">📄 Descargar portafolio</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 ALFTERIA | Ingeniería Eléctrica Integral
+</footer>
 
 <script>
-  function mostrarMas(btn) {
-    const info = btn.nextElementSibling;
-    if (info.style.display === "none" || info.style.display === "") {
-      info.style.display = "block";
-      btn.innerText = "- Ocultar";
-    } else {
-      info.style.display = "none";
-      btn.innerText = "+ Info";
-    }
+  function toggleInfo(card) {
+    card.classList.toggle('active');
   }
 
   function mostrarGracias(e) {
