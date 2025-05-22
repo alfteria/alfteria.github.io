@@ -192,7 +192,11 @@
     .card { cursor: pointer; }
     .card.active .info { display: block !important; }
 
-    
+    <script>
+      function toggleInfo(card) {
+        card.classList.toggle('active');
+      }
+    </script>
 </style>
 </head>
 <body>
@@ -225,46 +229,30 @@
         Incluye estudios de carga, diagramas unifilares, especificaciones de equipos y selección de materiales conforme a normas internacionales.
       </div>
     </div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
+    <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización"/>
       <h3>Fiscalización</h3>
       <p>Supervisión técnica y control de cumplimiento en obra.</p>
-      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
-        Verificación de planos, inspección de instalación en campo, cumplimiento de normativa vigente y levantamiento de reportes técnicos.
-      </div>
     </div>
-    <div class="card" onclick="toggleInfo(this)">
+    <div class="card">
       <img src="https://cdn-icons-png.flaticon.com/512/2942/2942921.png" alt="Media Tensión"/>
       <h3>Media Tensión</h3>
       <p>Redes de distribución para sectores industriales y urbanos.</p>
-      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
-        Diseño y montaje de celdas, transformadores, protecciones, canalizaciones y acometidas en sistemas de 13.8 kV y similares.
-      </div>
     </div>
-    <div class="card" onclick="toggleInfo(this)">
+    <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/smart-home-automation.png" alt="Baja Tensión"/>
       <h3>Baja Tensión</h3>
       <p>Instalaciones interiores, iluminación, fuerza y tomacorrientes.</p>
-      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
-        Implementación de sistemas de iluminación LED, tomas eléctricas, canalizaciones, tableros de distribución y protecciones.
-      </div>
     </div>
-    <div class="card" onclick="toggleInfo(this)">
+    <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento"/>
       <h3>Mantenimiento</h3>
       <p>Soporte preventivo y correctivo de sistemas eléctricos.</p>
-      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
-        Inspección, pruebas, limpieza, reapriete, mediciones eléctricas y correctivos en tableros, sistemas de fuerza, alumbrado y equipos críticos.
-      </div>
     </div>
-    <div class="card" onclick="toggleInfo(this)">
+    <div class="card">
       <img src="https://cdn-icons-png.flaticon.com/512/8830/8830593.png" alt="Alquiler de Equipos"/>
       <h3>Alquiler de Equipos</h3>
       <p>Disponibilidad de equipos eléctricos y herramientas especializadas para proyectos temporales.</p>
-      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
-        Equipos de medición, meggers, multímetros, analizadores de redes, herramientas de instalación y elementos de protección personal.
-      </div>
     </div>
   </div>
 </section>
@@ -342,9 +330,4 @@
 
 <footer>
   &copy; 2025 ALFTERIA | Ingeniería Eléctrica Integral
-<script>
-  function toggleInfo(card) {
-    card.classList.toggle('active');
-  }
-</script>
 </footer>
