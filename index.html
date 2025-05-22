@@ -51,13 +51,38 @@
       color: #ffffff;
     }
 
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background-image: url('https://images.unsplash.com/photo-1581090700227-4c3bffc2a2d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 4px solid #00ccff;
+    }
+
+    header img {
+      max-width: 250px;
+      background-color: rgba(0,0,0,0.6);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+      font-size: 32px;
+      color: #00bfff;
+      animation: fadeIn 1s ease-in;
+    }
+
     .section {
       max-width: 1200px;
       margin: auto;
       padding: 20px;
+      animation: fadeInUp 0.8s ease forwards;
     }
 
-    .services {
+    .services, .projects, .team, .clients {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
@@ -111,72 +136,192 @@
       background-color: #009fcc;
     }
 
-    .info {
-      font-size: 14px;
-      color: #aeeaff;
-      margin-top: 10px;
-      display: none;
+    .about-text, .contact-form {
+      padding: 20px;
     }
 
-    .info.mostrar {
-      display: block !important;
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+
+    form button {
+      margin-top: 15px;
+      background-color: #00ccff;
+      color: #00101f;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #009fcc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+      background-color: #010d1a;
+      color: #aaa;
+      border-top: 2px solid #00ccff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1001;
+    }
+
+    .whatsapp-button img {
+      width: 30px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      header img {
+        max-width: 180px;
+      }
+      .services, .projects, .team, .clients {
+        grid-template-columns: 1fr;
+      }
+      .card img {
+        width: 50px;
+      }
     }
   </style>
 </head>
 <body>
 
 <nav>
-  <a href="#"><img src="logo_alfteria.png" alt="Logo Alfteria" style="height: 70px; vertical-align: middle; border-radius: 6px; box-shadow: 0 0 6px rgba(0,204,255,0.5);"></a>
+  <a href="#" style="display: inline-block; vertical-align: middle; margin-right: 20px;">
+    <img src="logo_alfteria.png" alt="Logo Alfteria" style="height: 70px; vertical-align: middle; border-radius: 6px; box-shadow: 0 0 6px rgba(0,204,255,0.5);">
+  </a>
   <a href="#servicios">Servicios</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#equipo">Equipo</a>
+  <a href="#clientes">Clientes</a>
+  <a href="#contacto">Contacto</a>
 </nav>
+
+<a class="whatsapp-button" href="https://wa.me/5930992562878" target="_blank" title="Escríbenos por WhatsApp">
+  <img src="https://img.icons8.com/ios-filled/100/ffffff/whatsapp.png" alt="WhatsApp">
+</a>
 
 <section id="servicios" class="section">
   <h2>Servicios</h2>
   <div class="services">
-
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/blueprint.png" alt="Diseño"/>
       <h3>Diseño</h3>
       <p>Planificación técnica, cálculos y elaboración de planos eléctricos.</p>
       <button onclick="mostrarMas(this)">+ Info</button>
-      <div class="info">Incluye estudios de carga, diagramas unifilares, especificaciones de equipos y selección de materiales conforme a normas internacionales.</div>
+      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
+        Incluye estudios de carga, diagramas unifilares, especificaciones de equipos y selección de materiales conforme a normas internacionales.
+      </div>
     </div>
-
     <div class="card">
       <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización"/>
       <h3>Fiscalización</h3>
       <p>Supervisión técnica y control de cumplimiento en obra.</p>
       <button onclick="mostrarMas(this)">+ Info</button>
-      <div class="info">Validación de planos, control de calidad de instalación, verificación de pruebas eléctricas y conformidad normativa.</div>
+      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
+        Validación de planos, control de calidad de instalación, verificación de pruebas eléctricas y conformidad normativa.
+      </div>
     </div>
-
     <div class="card">
       <img src="https://cdn-icons-png.flaticon.com/512/2942/2942921.png" alt="Media Tensión"/>
       <h3>Media Tensión</h3>
       <p>Redes de distribución para sectores industriales y urbanos.</p>
       <button onclick="mostrarMas(this)">+ Info</button>
-      <div class="info">
-        Diseño, cálculo y ejecución de redes de media tensión conforme a las normativas IEC 62271 y RETIE, incluyendo subestaciones, acometidas, seccionamiento, protecciones y coordinación con la red de distribución eléctrica.
+      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
+        Diseño e instalación de subestaciones, líneas aéreas o subterráneas y protecciones acorde a la normativa IEC y RETIE.
       </div>
     </div>
-
-    <!-- Puedes seguir agregando más servicios aquí -->
-
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/smart-home-automation.png" alt="Baja Tensión"/>
+      <h3>Baja Tensión</h3>
+      <p>Instalaciones interiores, iluminación, fuerza y tomacorrientes.</p>
+      <button onclick="mostrarMas(this)">+ Info</button>
+      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
+        Sistemas eléctricos para viviendas, oficinas y locales, integrando eficiencia energética, protección y estética.
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento"/>
+      <h3>Mantenimiento</h3>
+      <p>Soporte preventivo y correctivo de sistemas eléctricos.</p>
+      <button onclick="mostrarMas(this)">+ Info</button>
+      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
+        Diagnóstico de fallas, mediciones eléctricas, cambios de componentes y mantenimiento programado de equipos.
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/8830/8830593.png" alt="Alquiler de Equipos"/>
+      <h3>Alquiler de Equipos</h3>
+      <p>Disponibilidad de equipos eléctricos y herramientas especializadas para proyectos temporales.</p>
+      <button onclick="mostrarMas(this)">+ Info</button>
+      <div class="info" style="display:none; font-size: 14px; color: #aeeaff; margin-top: 10px;">
+        Equipos certificados disponibles por día o semana: analizadores, transformadores portátiles, torres de iluminación y más.
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- Puedes mantener tus demás secciones igual: proyectos, nosotros, equipo, clientes, contacto, footer -->
 
 <script>
   function mostrarMas(btn) {
     const info = btn.nextElementSibling;
-    const isVisible = info.classList.contains('mostrar');
-
-    if (isVisible) {
-      info.classList.remove('mostrar');
-      btn.innerText = "+ Info";
-    } else {
-      info.classList.add('mostrar');
+    if (info.style.display === "none" || info.style.display === "") {
+      info.style.display = "block";
       btn.innerText = "- Ocultar";
+    } else {
+      info.style.display = "none";
+      btn.innerText = "+ Info";
     }
+  }
+
+  function mostrarGracias(e) {
+    e.preventDefault();
+    document.getElementById('mensajeGracias').style.display = 'block';
   }
 </script>
 
