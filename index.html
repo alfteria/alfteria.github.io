@@ -10,7 +10,8 @@
     * {margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;}
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #041936, #00101f);
+      background: url('https://images.unsplash.com/photo-1584270354949-1e446330ec7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       line-height: 1.6;
     }
@@ -155,7 +156,28 @@
     .whatsapp-button img {
       width: 30px;
     }
-  </style>
+      @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      header img {
+        max-width: 180px;
+      }
+      .services, .projects, .team, .clients {
+        grid-template-columns: 1fr;
+      }
+      .card img {
+        width: 50px;
+      }
+    }
+</style>
 </head>
 <body>
 
