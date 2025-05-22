@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,9 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alfteria | Ingeniería Eléctrica</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="logo_alfteria.png">
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;}
+    * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to bottom, #041936, #00101f);
@@ -29,7 +29,6 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
-      transition: color 0.3s ease;
     }
     nav a:hover {
       text-decoration: underline;
@@ -54,13 +53,11 @@
       margin: 40px 0 20px;
       font-size: 32px;
       color: #00bfff;
-      animation: fadeIn 1s ease-in;
     }
     .section {
       max-width: 1200px;
       margin: auto;
       padding: 20px;
-      animation: fadeInUp 0.8s ease forwards;
     }
     .services, .projects, .team, .clients {
       display: grid;
@@ -83,7 +80,6 @@
     .card img {
       width: 60px;
       margin-bottom: 15px;
-      filter: drop-shadow(0 0 5px #00ccff);
     }
     .card h3 {
       color: #00ccff;
@@ -128,52 +124,23 @@
       color: #aaa;
       border-top: 2px solid #00ccff;
     }
-    /* Animaciones */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    /* Botón flotante WhatsApp */
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1001;
-    }
-    .whatsapp-button img {
-      width: 30px;
-    }
   </style>
 </head>
 <body>
 
 <nav>
-  <a href="#" style="display: inline-block; vertical-align: middle; margin-right: 20px;">
-    <img src="logo_alfteria.png" alt="Logo Alfteria" style="height: 40px; vertical-align: middle; border-radius: 6px; box-shadow: 0 0 6px rgba(0,204,255,0.5);">
-  </a>
-<a href="#servicios">Servicios</a>
+  <a href="#servicios">Servicios</a>
   <a href="#proyectos">Proyectos</a>
   <a href="#nosotros">Nosotros</a>
   <a href="#equipo">Equipo</a>
   <a href="#clientes">Clientes</a>
   <a href="#contacto">Contacto</a>
+  <a href="#servicios">Alquiler de Equipos</a>
 </nav>
 
-<a class="whatsapp-button" href="https://wa.me/5930992562878" target="_blank" title="Escríbenos por WhatsApp">
-  <img src="https://img.icons8.com/ios-filled/100/ffffff/whatsapp.png" alt="WhatsApp">
-</a>
+<header>
+  <img src="logo_alfteria.png" alt="Logo Alfteria">
+</header>
 
 <section id="servicios" class="section">
   <h2>Servicios</h2>
@@ -189,7 +156,7 @@
       <p>Supervisión técnica y control de cumplimiento en obra.</p>
     </div>
     <div class="card">
-      <img src="https://img.icons8.com/color/96/power.png" alt="Media Tensión"/>
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/high-voltage.png" alt="Media Tensión"/>
       <h3>Media Tensión</h3>
       <p>Redes de distribución para sectores industriales y urbanos.</p>
     </div>
@@ -204,7 +171,7 @@
       <p>Soporte preventivo y correctivo de sistemas eléctricos.</p>
     </div>
     <div class="card">
-      <img src="https://img.icons8.com/color/96/tester.png" alt="Alquiler de Equipos"/>
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/multimeter.png" alt="Alquiler de Equipos"/>
       <h3>Alquiler de Equipos</h3>
       <p>Disponibilidad de equipos eléctricos y herramientas especializadas para proyectos temporales.</p>
     </div>
