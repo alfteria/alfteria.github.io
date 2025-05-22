@@ -284,12 +284,19 @@
 <section id="contacto" class="section">
   <h2>Contáctanos</h2>
   <div class="contact-form">
-    <form action="#" method="post">
+    <form action="#" method="post" onsubmit="mostrarGracias(event)">
       <input type="text" name="nombre" placeholder="Tu nombre" required>
       <input type="email" name="email" placeholder="Tu correo" required>
       <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
       <button type="submit">Enviar Mensaje</button>
     </form>
+    <p id="mensajeGracias" style="display: none; text-align: center; margin-top: 15px; color: #00ffcc; font-weight: bold;">✅ Gracias por contactarnos. Te responderemos pronto.</p>
+    <script>
+      function mostrarGracias(e) {
+        e.preventDefault();
+        document.getElementById('mensajeGracias').style.display = 'block';
+      }
+    </script>
     <p style="text-align:center; margin-top: 10px;">
       <a href="portafolio-alfteria.pdf" target="_blank" style="color: #00ccff; text-decoration: underline;">📄 Descargar portafolio</a>
     </p>
