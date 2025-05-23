@@ -7,12 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="logo_alfteria.png">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * {margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;}
     body::before {
       content: "";
       position: fixed;
@@ -46,9 +41,7 @@
       font-size: 16px;
       transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: #ffffff;
-    }
+    nav a:hover {color: #ffffff;}
     header {
       text-align: center;
       padding: 60px 20px 30px;
@@ -68,13 +61,11 @@
       margin: 50px 0 25px;
       font-size: 34px;
       color: #00bfff;
-      animation: fadeIn 1s ease-in;
     }
     .section {
       max-width: 1200px;
       margin: auto;
       padding: 20px;
-      animation: fadeInUp 0.8s ease forwards;
     }
     .services, .projects, .team, .clients {
       display: grid;
@@ -128,8 +119,6 @@
       border-radius: 8px;
       border: none;
       font-size: 16px;
-      background-color: #f0f0f0;
-      color: #000;
     }
     form button {
       margin-top: 15px;
@@ -141,7 +130,6 @@
       font-weight: bold;
       font-size: 16px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
     }
     form button:hover {
       background-color: #009fcc;
@@ -153,14 +141,6 @@
       background-color: #001425;
       color: #aaa;
       border-top: 2px solid #00ccff;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
     .whatsapp-button {
       position: fixed;
@@ -220,392 +200,26 @@
 <section id="servicios" class="section">
   <h2>Servicios</h2>
   <div class="services">
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/blueprint.png" alt="Diseño"/>
-      <h3>Diseño</h3>
-      <p>Planificación técnica, cálculos y planos eléctricos.</p>
-      <div class="info">Estudios de carga, diagramas unifilares, especificaciones y selección de materiales según normativa internacional.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización"/>
-      <h3>Fiscalización</h3>
-      <p>Supervisión técnica y control de calidad en obra.</p>
-      <div class="info">Aseguramos la ejecución conforme a planos, normas técnicas y cronograma establecido.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942921.png" alt="Media Tensión"/>
-      <h3>Media Tensión</h3>
-      <p>Redes de distribución para industrias y sectores urbanos.</p>
-      <div class="info">Diseño y montaje de acometidas, subestaciones, protecciones y transformadores.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/smart-home-automation.png" alt="Baja Tensión"/>
-      <h3>Baja Tensión</h3>
-      <p>Instalaciones interiores, iluminación y tomacorrientes.</p>
-      <div class="info">Cableado estructurado, tableros, puntos de fuerza y respaldo UPS.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento"/>
-      <h3>Mantenimiento</h3>
-      <p>Soporte preventivo y correctivo.</p>
-      <div class="info">Planes periódicos, análisis termográficos y solución de fallas en sistemas eléctricos.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://cdn-icons-png.flaticon.com/512/8830/8830593.png" alt="Alquiler"/>
-      <h3>Alquiler de Equipos</h3>
-      <p>Herramientas y equipos especializados.</p>
-      <div class="info">Disponibilidad de equipos eléctricos para pruebas, respaldo o ejecución temporal.</div>
-    </div>
+    <!-- Aquí irían las tarjetas de servicios -->
   </div>
 </section>
 
-<section id="proyectos" class="section">
-  <h2>Proyectos Realizados</h2>
-  <div class="projects">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/factory.png" alt="Planta Industrial">
-      <h3>Planta Industrial LATAM</h3>
-      <p>Diseño y ejecución de redes MT para producción alimentaria.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/shopping-mall.png" alt="Centro Comercial">
-      <h3>Centro Comercial Quito</h3>
-      <p>Instalación completa BT, iluminación y respaldo energético.</p>
-    </div>
-  </div>
-</section>
-
-<section id="nosotros" class="section">
-  <h2>Sobre Nosotros</h2>
-  <div class="about-text">
-    <p><strong>ALFTERIA</strong> es una empresa ecuatoriana especializada en soluciones integrales de ingeniería eléctrica. Nos enfocamos en calidad, seguridad y cumplimiento normativo para ofrecer resultados sobresalientes en cada proyecto.</p>
-  </div>
-</section>
-
-<section id="equipo" class="section">
-  <h2>Nuestro Equipo</h2>
-  <div class="about-text">
-    <p>Contamos con ingenieros y técnicos especializados, comprometidos con soluciones efectivas, sostenibles y adaptadas a cada cliente.</p>
-  </div>
-</section>
-
-<section id="clientes" class="section">
-  <h2>Clientes y Alianzas</h2>
-  <div class="clients">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/company.png" alt="Promart"/>
-      <h3>Promart</h3>
-      <p>Proyectos eléctricos nacionales con enfoque en eficiencia energética.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/conference-call.png" alt="Ripconciv"/>
-      <h3>Ripconciv</h3>
-      <p>Instalaciones de MT y BT en obras de infraestructura.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contacto" class="section">
-  <h2>Contáctanos</h2>
-  <div class="contact-form">
-    <form onsubmit="mostrarGracias(event)">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo" required>
-      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-    </form>
-    <p id="mensajeGracias" style="display: none; text-align: center; margin-top: 15px; color: #00ffcc; font-weight: bold;">✅ Gracias por contactarnos. Te responderemos pronto.</p>
-    <p style="text-align:center; margin-top: 10px;">
-      <a href="portafolio-alfteria.pdf" target="_blank" style="color: #00ccff; text-decoration: underline;">📄 Descargar portafolio</a>
-    </p>
-  </div>
-</section>
+<!-- Aquí continúan las secciones de proyectos, nosotros, equipo, clientes, contacto -->
 
 <footer>
   &copy; 2025 ALFTERIA | Ingeniería Eléctrica Integral
 </footer>
 
 <script>
-  function toggleInfo(card) {
-    card.classList.toggle('active');
-  }
-  function mostrarGracias(e) {
-    e.preventDefault();
-    document.getElementById('mensajeGracias').style.display = 'block';
-  }
-</script>
-
-</body>
-</html>
-
-__________________________________________________________________________________________________________________________________________________________
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alfteria | Ingeniería Eléctrica Integral</title>
-  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="logo_alfteria.png">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1584270354949-1e446330ec7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-      background-size: cover;
-      z-index: -1;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      color: #f0f0f0;
-      line-height: 1.7;
-    }
-    nav {
-      background-color: #001425;
-      padding: 15px 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-    nav a {
-      color: #00ccff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ffffff;
-    }
-    header {
-      text-align: center;
-      padding: 60px 20px 30px;
-      background-image: url('https://images.unsplash.com/photo-1581090700227-4c3bffc2a2d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
-      background-size: cover;
-      background-position: center;
-      border-bottom: 4px solid #00ccff;
-    }
-    header img {
-      max-width: 260px;
-      background-color: rgba(0,0,0,0.6);
-      padding: 10px;
-      border-radius: 10px;
-    }
-    h2 {
-      text-align: center;
-      margin: 50px 0 25px;
-      font-size: 34px;
-      color: #00bfff;
-      animation: fadeIn 1s ease-in;
-    }
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-      animation: fadeInUp 0.8s ease forwards;
-    }
-    .services, .projects, .team, .clients {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      margin-top: 20px;
-    }
-    .card {
-      background: #0b2b48;
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-      cursor: pointer;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 18px rgba(0,0,0,0.5);
-    }
-    .card img {
-      width: 60px;
-      margin-bottom: 15px;
-      filter: drop-shadow(0 0 5px #00ccff);
-    }
-    .card h3 {
-      color: #00ccff;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-    .card p {
-      font-size: 15px;
-      color: #d0e6f0;
-    }
-    .info {
-      display: none;
-      font-size: 14px;
-      color: #aeeaff;
-      margin-top: 10px;
-    }
-    .card.active .info {
-      display: block !important;
-    }
-    .about-text, .contact-form {
-      padding: 20px;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-      background-color: #f0f0f0;
-      color: #000;
-    }
-    form button {
-      margin-top: 15px;
-      background-color: #00ccff;
-      color: #00101f;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    form button:hover {
-      background-color: #009fcc;
-    }
-    footer {
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-      background-color: #001425;
-      color: #aaa;
-      border-top: 2px solid #00ccff;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1001;
-    }
-    .whatsapp-button img {
-      width: 30px;
-    }
-    @media (max-width: 768px) {
-      nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      nav a {
-        display: block;
-        margin: 10px 0;
-        font-size: 18px;
-      }
-      header img {
-        max-width: 180px;
-      }
-      .services, .projects, .team, .clients {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<nav>
-  <a href="#" style="display:inline-block; margin-right: 20px;">
-    <img src="logo_alfteria.png" alt="Logo Alfteria" style="height: 70px; border-radius: 6px; box-shadow: 0 0 6px rgba(0,204,255,0.5);">
-  </a>
-  <a href="#servicios">Servicios</a>
-  <a href="#proyectos">Proyectos</a>
-  <a href="#nosotros">Nosotros</a>
-  <a href="#equipo">Equipo</a>
-  <a href="#clientes">Clientes</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
-<a class="whatsapp-button" href="https://wa.me/5930992562878" target="_blank" title="Escríbenos por WhatsApp" aria-label="Escríbenos por WhatsApp">
-  <img src="https://img.icons8.com/ios-filled/100/ffffff/whatsapp.png" alt="WhatsApp">
-</a>
-
-<section id="servicios" class="section">
-  <h2>Servicios</h2>
-  <div class="services">
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/blueprint.png" alt="Diseño"/>
-      <h3>Diseño</h3>
-      <p>Planificación técnica, cálculos y planos eléctricos.</p>
-      <div class="info">Estudios de carga, diagramas unifilares, especificaciones y selección de materiales según normativa internacional.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización"/>
-      <h3>Fiscalización</h3>
-      <p>Supervisión técnica y control de calidad en obra.</p>
-      <div class="info">Aseguramos la ejecución conforme a planos, normas técnicas y cronograma establecido.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942921.png" alt="Media Tensión"/>
-      <h3>Media Tensión</h3>
-      <p>Redes de distribución para industrias y sectores urbanos.</p>
-      <div class="info">Diseño y montaje de acometidas, subestaciones, protecciones, cableado y transformadores de potencia.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/smart-home-automation.png" alt="Baja Tensión"/>
-      <h3>Baja Tensión</h3>
-      <p>Instalaciones interiores, iluminación y tomacorrientes.</p>
-      <div class="info">Incluye tomas, iluminación, sistemas de respaldo, tableros eléctricos y protección diferencial.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento"/>
-      <h3>Mantenimiento</h3>
-      <p>Soporte preventivo y correctivo.</p>
-      <div class="info">Planes periódicos, revisión de conexiones, análisis termográficos y reparación de fallas críticas.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://cdn-icons-png.flaticon.com/512/8830/8830593.png" alt="Alquiler de Equipos"/>
-      <h3>Alquiler de Equipos</h3>
-      <p>Herramientas y equipos especializados.</p>
-      <div class="info">Incluye alquiler de bancos de carga, analizadores de red, medidores de aislamiento, UPS y más.</div>
-    </div>
-  </div>
-</section>
-
-<!-- Puedes mantener aquí las otras secciones: proyectos, nosotros, equipo, clientes, contacto, etc. -->
-
-<script>
-  function toggleInfo(card) {
-    card.classList.toggle('active');
-  }
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.services .card');
+    cards.forEach(card => {
+      card.addEventListener('click', function () {
+        cards.forEach(c => { if (c !== card) c.classList.remove('active'); });
+        this.classList.toggle('active');
+      });
+    });
+  });
 
   function mostrarGracias(e) {
     e.preventDefault();
