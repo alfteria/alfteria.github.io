@@ -24,10 +24,37 @@
       color: #f0f0f0;
       line-height: 1.7;
     }
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
+    nav {
+      background-color: #001425;
+      padding: 15px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    nav a {
+      color: #00ccff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {color: #ffffff;}
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background-image: url('https://images.unsplash.com/photo-1581090700227-4c3bffc2a2d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      border-bottom: 4px solid #00ccff;
+    }
+    header img {
+      max-width: 260px;
+      background-color: rgba(0,0,0,0.6);
+      padding: 10px;
+      border-radius: 10px;
     }
     h2 {
       text-align: center;
@@ -35,12 +62,52 @@
       font-size: 34px;
       color: #00bfff;
     }
-    .clients {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    .services, .projects, .team, .clients {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #0b2b48;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.5);
+    }
+    .card img {
+      width: 60px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 0 5px #00ccff);
+    }
+    .card h3 {
+      color: #00ccff;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .card p {
+      font-size: 15px;
+      color: #d0e6f0;
+    }
+    .info {
+      display: none;
+      font-size: 14px;
+      color: #aeeaff;
+      margin-top: 10px;
+    }
+    .card.active .info {
+      display: block !important;
     }
     .clients .card {
       background: #0b2b48;
@@ -63,13 +130,132 @@
       font-size: 16px;
       color: #00ccff;
     }
-    .clients .card a {
-      text-decoration: none;
-      color: inherit;
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1001;
+    }
+    .whatsapp-button img {
+      width: 30px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    form button {
+      margin-top: 15px;
+      background-color: #00ccff;
+      color: #00101f;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #009fcc;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+      background-color: #001425;
+      color: #aaa;
+      border-top: 2px solid #00ccff;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      header img {
+        max-width: 180px;
+      }
+      .services, .projects, .team, .clients {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
+
+<nav>
+  <a href="#" style="display:inline-block; margin-right: 20px;">
+    <img src="logo_alfteria.png" alt="Logo Alfteria" style="height: 70px; border-radius: 6px; box-shadow: 0 0 6px rgba(0,204,255,0.5);">
+  </a>
+  <a href="#servicios">Servicios</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#equipo">Equipo</a>
+  <a href="#clientes">Clientes</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<a class="whatsapp-button" href="https://wa.me/5930992562878" target="_blank" title="Escríbenos por WhatsApp" aria-label="Escríbenos por WhatsApp">
+  <img src="https://img.icons8.com/ios-filled/100/ffffff/whatsapp.png" alt="WhatsApp">
+</a>
+
+<section id="servicios" class="section">
+  <h2>Servicios</h2>
+  <div class="services">
+    <div class="card" onclick="toggleInfo(this)">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/blueprint.png" alt="Diseño"/>
+      <h3>Diseño</h3>
+      <p>Planificación técnica, cálculos y planos eléctricos.</p>
+      <div class="info">Estudios de carga, diagramas unifilares, especificaciones y selección de materiales según normativa internacional.</div>
+    </div>
+    <div class="card" onclick="toggleInfo(this)">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización"/>
+      <h3>Fiscalización</h3>
+      <p>Supervisión técnica y control de calidad en obra.</p>
+      <div class="info">Aseguramos la ejecución conforme a planos, normas técnicas y cronograma establecido.</div>
+    </div>
+    <div class="card" onclick="toggleInfo(this)">
+      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942921.png" alt="Media Tensión"/>
+      <h3>Media Tensión</h3>
+      <p>Redes de distribución para industrias y sectores urbanos.</p>
+      <div class="info">Diseño y montaje de acometidas, subestaciones, protecciones y transformadores.</div>
+    </div>
+    <div class="card" onclick="toggleInfo(this)">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/smart-home-automation.png" alt="Baja Tensión"/>
+      <h3>Baja Tensión</h3>
+      <p>Instalaciones interiores, iluminación y tomacorrientes.</p>
+      <div class="info">Cableado estructurado, tableros, puntos de fuerza y respaldo UPS.</div>
+    </div>
+    <div class="card" onclick="toggleInfo(this)">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento"/>
+      <h3>Mantenimiento</h3>
+      <p>Soporte preventivo y correctivo.</p>
+      <div class="info">Planes periódicos, análisis termográficos y solución de fallas en sistemas eléctricos.</div>
+    </div>
+    <div class="card" onclick="toggleInfo(this)">
+      <img src="https://cdn-icons-png.flaticon.com/512/8830/8830593.png" alt="Alquiler"/>
+      <h3>Alquiler de Equipos</h3>
+      <p>Herramientas y equipos especializados.</p>
+      <div class="info">Disponibilidad de equipos eléctricos para pruebas, respaldo o ejecución temporal.</div>
+    </div>
+  </div>
+</section>
 
 <section id="clientes" class="section">
   <h2>Marcas Certificadas con las que trabajamos</h2>
@@ -91,6 +277,27 @@
     <div class="card"><a href="https://www.viakon.com.mx/" target="_blank"><img src="https://www.viakon.com.mx/wp-content/uploads/2020/11/viakon-logo.png" alt="Viakon"><h3>Viakon</h3></a></div>
   </div>
 </section>
+
+<footer>
+  &copy; 2025 ALFTERIA | Ingeniería Eléctrica Integral
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.services .card');
+    cards.forEach(card => {
+      card.addEventListener('click', function () {
+        cards.forEach(c => { if (c !== card) c.classList.remove('active'); });
+        this.classList.toggle('active');
+      });
+    });
+  });
+
+  function mostrarGracias(e) {
+    e.preventDefault();
+    document.getElementById('mensajeGracias').style.display = 'block';
+  }
+</script>
 
 </body>
 </html>
