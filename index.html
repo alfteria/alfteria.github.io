@@ -24,37 +24,10 @@
       color: #f0f0f0;
       line-height: 1.7;
     }
-    nav {
-      background-color: #001425;
-      padding: 15px 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-    nav a {
-      color: #00ccff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {color: #ffffff;}
-    header {
-      text-align: center;
-      padding: 60px 20px 30px;
-      background-image: url('https://images.unsplash.com/photo-1581090700227-4c3bffc2a2d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
-      background-size: cover;
-      background-position: center;
-      border-bottom: 4px solid #00ccff;
-    }
-    header img {
-      max-width: 260px;
-      background-color: rgba(0,0,0,0.6);
-      padding: 10px;
-      border-radius: 10px;
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
     }
     h2 {
       text-align: center;
@@ -62,290 +35,62 @@
       font-size: 34px;
       color: #00bfff;
     }
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
-    .services, .projects, .team, .clients {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      margin-top: 20px;
-    }
-    .card {
-      background: #0b2b48;
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-      cursor: pointer;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 18px rgba(0,0,0,0.5);
-    }
-    .card img {
-      width: 60px;
-      margin-bottom: 15px;
-      filter: drop-shadow(0 0 5px #00ccff);
-    }
-    .card h3 {
-      color: #00ccff;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-    .card p {
-      font-size: 15px;
-      color: #d0e6f0;
-    }
-    .info {
-      display: none;
-      font-size: 14px;
-      color: #aeeaff;
-      margin-top: 10px;
-    }
-    .card.active .info {
-      display: block !important;
-    }
-    .about-text, .contact-form {
-      padding: 20px;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-    }
-    form button {
-      margin-top: 15px;
-      background-color: #00ccff;
-      color: #00101f;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: #009fcc;
-    }
-    footer {
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-      background-color: #001425;
-      color: #aaa;
-      border-top: 2px solid #00ccff;
-    }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
+    .clients {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .clients .card {
+      background: #0b2b48;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      width: 160px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1001;
+      transition: transform 0.3s;
     }
-    .whatsapp-button img {
-      width: 30px;
+    .clients .card:hover {
+      transform: scale(1.05);
     }
-    @media (max-width: 768px) {
-      nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      nav a {
-        display: block;
-        margin: 10px 0;
-        font-size: 18px;
-      }
-      header img {
-        max-width: 180px;
-      }
-      .services, .projects, .team, .clients {
-        grid-template-columns: 1fr;
-      }
+    .clients .card img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .clients .card h3 {
+      font-size: 16px;
+      color: #00ccff;
+    }
+    .clients .card a {
+      text-decoration: none;
+      color: inherit;
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <a href="#" style="display:inline-block; margin-right: 20px;">
-    <img src="logo_alfteria.png" alt="Logo Alfteria" style="height: 70px; border-radius: 6px; box-shadow: 0 0 6px rgba(0,204,255,0.5);">
-  </a>
-  <a href="#servicios">Servicios</a>
-  <a href="#proyectos">Proyectos</a>
-  <a href="#nosotros">Nosotros</a>
-  <a href="#equipo">Equipo</a>
-  <a href="#clientes">Clientes</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
-<a class="whatsapp-button" href="https://wa.me/5930992562878" target="_blank" title="Escríbenos por WhatsApp" aria-label="Escríbenos por WhatsApp">
-  <img src="https://img.icons8.com/ios-filled/100/ffffff/whatsapp.png" alt="WhatsApp">
-</a>
-
-<section id="servicios" class="section">
-  <h2>Servicios</h2>
-  <div class="services">
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/blueprint.png" alt="Diseño"/>
-      <h3>Diseño</h3>
-      <p>Planificación técnica, cálculos y planos eléctricos.</p>
-      <div class="info">Estudios de carga, diagramas unifilares, especificaciones y selección de materiales según normativa internacional.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización"/>
-      <h3>Fiscalización</h3>
-      <p>Supervisión técnica y control de calidad en obra.</p>
-      <div class="info">Aseguramos la ejecución conforme a planos, normas técnicas y cronograma establecido.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942921.png" alt="Media Tensión"/>
-      <h3>Media Tensión</h3>
-      <p>Redes de distribución para industrias y sectores urbanos.</p>
-      <div class="info">Diseño y montaje de acometidas, subestaciones, protecciones y transformadores.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/smart-home-automation.png" alt="Baja Tensión"/>
-      <h3>Baja Tensión</h3>
-      <p>Instalaciones interiores, iluminación y tomacorrientes.</p>
-      <div class="info">Cableado estructurado, tableros, puntos de fuerza y respaldo UPS.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento"/>
-      <h3>Mantenimiento</h3>
-      <p>Soporte preventivo y correctivo.</p>
-      <div class="info">Planes periódicos, análisis termográficos y solución de fallas en sistemas eléctricos.</div>
-    </div>
-    <div class="card" onclick="toggleInfo(this)">
-      <img src="https://cdn-icons-png.flaticon.com/512/8830/8830593.png" alt="Alquiler"/>
-      <h3>Alquiler de Equipos</h3>
-      <p>Herramientas y equipos especializados.</p>
-      <div class="info">Disponibilidad de equipos eléctricos para pruebas, respaldo o ejecución temporal.</div>
-    </div>
-  </div>
-</section>
-
-<section id="proyectos" class="section">
-  <h2>Proyectos Realizados</h2>
-  <div class="projects">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/home.png" alt="Residencial">
-      <h3>Residencial</h3>
-      <p>Soluciones eléctricas eficientes y seguras para urbanizaciones y viviendas.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/shop.png" alt="Comercial">
-      <h3>Comercial</h3>
-      <p>Diseño e implementación de sistemas eléctricos para locales y centros comerciales.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/factory.png" alt="Industrial">
-      <h3>Industrial</h3>
-      <p>Instalaciones eléctricas industriales adaptadas a entornos de producción.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/city-hall.png" alt="Institucional / Público">
-      <h3>Institucional / Público</h3>
-      <p>Soluciones para hospitales, escuelas, edificios gubernamentales y más.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/road.png" alt="Infraestructura urbana">
-      <h3>Infraestructura urbana</h3>
-      <p>Iluminación pública, redes subterráneas y sistemas de automatización urbana.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/solar-panel.png" alt="Energías renovables">
-      <h3>Energías renovables</h3>
-      <p>Implementación de sistemas solares fotovoltaicos y otras fuentes limpias.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/server.png" alt="Data centers y tecnología">
-      <h3>Data centers y tecnología</h3>
-      <p>Soluciones eléctricas de alta disponibilidad para tecnología y telecomunicaciones.</p>
-    </div>
-  </div>
-</section>
-
-<section id="nosotros" class="section">
-  <h2>Sobre Nosotros</h2>
-  <div class="about-text">
-    <p><strong>ALFTERIA</strong> es una empresa ecuatoriana especializada en soluciones integrales de ingeniería eléctrica. Nos enfocamos en calidad, seguridad y cumplimiento normativo para ofrecer resultados sobresalientes en cada proyecto.</p>
-  </div>
-</section>
-
-<section id="equipo" class="section">
-  <h2>Nuestro Equipo</h2>
-  <div class="about-text">
-    <p>Contamos con ingenieros y técnicos especializados, comprometidos con soluciones efectivas, sostenibles y adaptadas a cada cliente.</p>
-  </div>
-</section>
-
 <section id="clientes" class="section">
-  <h2>Clientes y Alianzas</h2>
+  <h2>Marcas Certificadas con las que trabajamos</h2>
   <div class="clients">
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/company.png" alt="Promart"/>
-      <h3>Promart</h3>
-      <p>Proyectos eléctricos nacionales con enfoque en eficiencia energética.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/conference-call.png" alt="Ripconciv"/>
-      <h3>Ripconciv</h3>
-      <p>Instalaciones de MT y BT en obras de infraestructura.</p>
-    </div>
+    <div class="card"><a href="https://new.abb.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/ABB_logo.svg" alt="ABB"><h3>ABB</h3></a></div>
+    <div class="card"><a href="https://www.se.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Schneider_Electric_2007.svg" alt="Schneider Electric"><h3>Schneider</h3></a></div>
+    <div class="card"><a href="https://www.siemens.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Siemens-logo.svg" alt="Siemens"><h3>Siemens</h3></a></div>
+    <div class="card"><a href="https://www.eaton.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Eaton_Corporation_logo.svg" alt="Eaton"><h3>Eaton</h3></a></div>
+    <div class="card"><a href="https://www.ge.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/General_Electric_logo.svg" alt="GE"><h3>GE</h3></a></div>
+    <div class="card"><a href="https://www.lselectric.co.kr/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/LS_Electric_logo.svg" alt="LS Electric"><h3>LS Electric</h3></a></div>
+    <div class="card"><a href="https://www.signify.com/global/brands/philips" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Philips_logo.svg" alt="Philips"><h3>Philips</h3></a></div>
+    <div class="card"><a href="https://www.osram.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Osram_logo.svg" alt="Osram"><h3>Osram</h3></a></div>
+    <div class="card"><a href="https://www.sylvania-lighting.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Sylvania_logo.svg" alt="Sylvania"><h3>Sylvania</h3></a></div>
+    <div class="card"><a href="https://www.iguzzini.com/" target="_blank"><img src="https://www.iguzzini.com/templates/iguzzini/assets/images/logo.svg" alt="Iguzzini"><h3>Iguzzini</h3></a></div>
+    <div class="card"><a href="https://www.disano.it/" target="_blank"><img src="https://www.disano.it/static/img/logo.png" alt="Disano"><h3>Disano</h3></a></div>
+    <div class="card"><a href="https://condunet.com/" target="_blank"><img src="https://condunet.com/wp-content/uploads/2021/08/logo-condunet.png" alt="Condunet"><h3>Condunet</h3></a></div>
+    <div class="card"><a href="https://www.indura.com.ec/" target="_blank"><img src="https://www.indura.com.ec/wp-content/uploads/2021/07/indura-logo.png" alt="Indura"><h3>Indura</h3></a></div>
+    <div class="card"><a href="https://www.condumex.com.mx/" target="_blank"><img src="https://condumex.com.mx/images/logo_condumex.png" alt="Condumex"><h3>Condumex</h3></a></div>
+    <div class="card"><a href="https://www.viakon.com.mx/" target="_blank"><img src="https://www.viakon.com.mx/wp-content/uploads/2020/11/viakon-logo.png" alt="Viakon"><h3>Viakon</h3></a></div>
   </div>
 </section>
-
-<section id="contacto" class="section">
-  <h2>Contáctanos</h2>
-  <div class="contact-form">
-    <form onsubmit="mostrarGracias(event)">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo" required>
-      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-    </form>
-    <p id="mensajeGracias" style="display: none; text-align: center; margin-top: 15px; color: #00ffcc; font-weight: bold;">✅ Gracias por contactarnos. Te responderemos pronto.</p>
-    <p style="text-align:center; margin-top: 10px;">
-      <a href="portafolio-alfteria.pdf" target="_blank" style="color: #00ccff; text-decoration: underline;">📄 Descargar portafolio</a>
-    </p>
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 ALFTERIA | Ingeniería Eléctrica Integral
-</footer>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll('.services .card');
-    cards.forEach(card => {
-      card.addEventListener('click', function () {
-        cards.forEach(c => { if (c !== card) c.classList.remove('active'); });
-        this.classList.toggle('active');
-      });
-    });
-  });
-
-  function mostrarGracias(e) {
-    e.preventDefault();
-    document.getElementById('mensajeGracias').style.display = 'block';
-  }
-</script>
 
 </body>
 </html>
