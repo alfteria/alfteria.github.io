@@ -311,36 +311,7 @@
       </div>
     </div>
 
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/shop.png" alt="Comercial">
-      <h3>Comercial</h3>
-      <p>Diseño e implementación de sistemas eléctricos para locales y centros comerciales.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/factory.png" alt="Industrial">
-      <h3>Industrial</h3>
-      <p>Instalaciones eléctricas industriales adaptadas a entornos de producción.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/city-hall.png" alt="Institucional / Público">
-      <h3>Institucional / Público</h3>
-      <p>Soluciones para hospitales, escuelas, edificios gubernamentales y más.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/road.png" alt="Infraestructura urbana">
-      <h3>Infraestructura urbana</h3>
-      <p>Iluminación pública, redes subterráneas y sistemas de automatización urbana.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/solar-panel.png" alt="Energías renovables">
-      <h3>Energías renovables</h3>
-      <p>Implementación de sistemas solares fotovoltaicos y otras fuentes limpias.</p>
-    </div>
-    <div class="card">
-      <img src="https://img.icons8.com/ios-filled/100/00ccff/server.png" alt="Data centers y tecnología">
-      <h3>Data centers y tecnología</h3>
-      <p>Soluciones eléctricas de alta disponibilidad para tecnología y telecomunicaciones.</p>
-    </div>
+    
   </div>
 </section>
 
@@ -396,10 +367,16 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll('.services .card');
-    cards.forEach(card => {
+    const allCards = document.querySelectorAll('.card');
+    allCards.forEach(card => {
       card.addEventListener('click', function () {
-        cards.forEach(c => { if (c !== card) c.classList.remove('active'); });
+        allCards.forEach(c => {
+          if (c !== card) c.classList.remove('active');
+        });
+        card.classList.toggle('active');
+      });
+    });
+  });
         this.classList.toggle('active');
       });
     });
