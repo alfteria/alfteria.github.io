@@ -67,7 +67,7 @@
       margin: auto;
       padding: 20px;
     }
-    .services, .projects, .team, .clients {
+    .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
@@ -85,6 +85,12 @@
     .card:hover {
       transform: translateY(-6px);
       box-shadow: 0 10px 18px rgba(0,0,0,0.5);
+    }
+    .card img {
+      width: 60px;
+      height: auto;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 0 4px rgba(0, 204, 255, 0.5));
     }
     .card h3 {
       color: #00ccff;
@@ -104,71 +110,8 @@
     .card.active .info {
       display: block !important;
     }
-    .about-text, .contact-form {
-      padding: 20px;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-    }
-    form button {
-      margin-top: 15px;
-      background-color: #00ccff;
-      color: #00101f;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: #009fcc;
-    }
-    footer {
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-      background-color: #001425;
-      color: #aaa;
-      border-top: 2px solid #00ccff;
-    }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      z-index: 1001;
-    }
-    .whatsapp-button img {
-      width: 30px;
-    }
     @media (max-width: 768px) {
-      nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      nav a {
-        display: block;
-        margin: 10px 0;
-        font-size: 18px;
-      }
-      header img {
-        max-width: 180px;
-      }
-      .services, .projects, .team, .clients {
+      .services {
         grid-template-columns: 1fr;
       }
     }
@@ -188,131 +131,47 @@
   <a href="#contacto">Contacto</a>
 </nav>
 
-<a class="whatsapp-button" href="https://wa.me/5930992562878" target="_blank" title="Escríbenos por WhatsApp" aria-label="Escríbenos por WhatsApp">
-  <img src="https://img.icons8.com/ios-filled/100/ffffff/whatsapp.png" alt="WhatsApp">
-</a>
-
 <section id="servicios" class="section">
   <h2>Servicios</h2>
   <div class="services">
     <div class="card" onclick="toggleInfo(this)">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/blueprint.png" alt="Diseño"/>
       <h3>Diseño</h3>
       <p>Planificación técnica, cálculos y planos eléctricos.</p>
+      <div class="info">Estudios de carga, diagramas unifilares, especificaciones y selección de materiales según normativa internacional.</div>
     </div>
     <div class="card" onclick="toggleInfo(this)">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/inspection.png" alt="Fiscalización"/>
       <h3>Fiscalización</h3>
       <p>Supervisión técnica y control de calidad en obra.</p>
+      <div class="info">Aseguramos la ejecución conforme a planos, normas técnicas y cronograma establecido.</div>
     </div>
     <div class="card" onclick="toggleInfo(this)">
+      <img src="https://cdn-icons-png.flaticon.com/512/2942/2942921.png" alt="Media Tensión"/>
       <h3>Media Tensión</h3>
       <p>Redes de distribución para industrias y sectores urbanos.</p>
+      <div class="info">Diseño y montaje de acometidas, subestaciones, protecciones y transformadores.</div>
     </div>
     <div class="card" onclick="toggleInfo(this)">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/smart-home-automation.png" alt="Baja Tensión"/>
       <h3>Baja Tensión</h3>
       <p>Instalaciones interiores, iluminación y tomacorrientes.</p>
+      <div class="info">Cableado estructurado, tableros, puntos de fuerza y respaldo UPS.</div>
     </div>
     <div class="card" onclick="toggleInfo(this)">
+      <img src="https://img.icons8.com/ios-filled/100/00ccff/maintenance.png" alt="Mantenimiento"/>
       <h3>Mantenimiento</h3>
       <p>Soporte preventivo y correctivo.</p>
+      <div class="info">Planes periódicos, análisis termográficos y solución de fallas en sistemas eléctricos.</div>
     </div>
     <div class="card" onclick="toggleInfo(this)">
+      <img src="https://cdn-icons-png.flaticon.com/512/8830/8830593.png" alt="Alquiler de Equipos"/>
       <h3>Alquiler de Equipos</h3>
       <p>Herramientas y equipos especializados.</p>
+      <div class="info">Disponibilidad de equipos eléctricos para pruebas, respaldo o ejecución temporal.</div>
     </div>
   </div>
 </section>
-
-<section id="proyectos" class="section">
-  <h2>Proyectos Realizados</h2>
-  <div class="projects">
-    <div class="card">
-      <h3>Residencial</h3>
-      <p>Soluciones eléctricas eficientes y seguras para urbanizaciones y viviendas.</p>
-    </div>
-    <div class="card">
-      <h3>Comercial</h3>
-      <p>Diseño e implementación de sistemas eléctricos para locales y centros comerciales.</p>
-    </div>
-    <div class="card">
-      <h3>Industrial</h3>
-      <p>Instalaciones eléctricas industriales adaptadas a entornos de producción.</p>
-    </div>
-    <div class="card">
-      <h3>Institucional / Público</h3>
-      <p>Soluciones para hospitales, escuelas, edificios gubernamentales y más.</p>
-    </div>
-    <div class="card">
-      <h3>Infraestructura urbana</h3>
-      <p>Iluminación pública, redes subterráneas y sistemas de automatización urbana.</p>
-    </div>
-    <div class="card">
-      <h3>Energías renovables</h3>
-      <p>Implementación de sistemas solares fotovoltaicos y otras fuentes limpias.</p>
-    </div>
-    <div class="card">
-      <h3>Data centers y tecnología</h3>
-      <p>Soluciones eléctricas de alta disponibilidad para tecnología y telecomunicaciones.</p>
-    </div>
-  </div>
-</section>
-
-<section id="clientes" class="section">
-  <h2>Marcas Certificadas con las que trabajamos</h2>
-  <div class="clients">
-    <div class="card"><h3>Schneider Electric</h3></div>
-    <div class="card"><h3>Siemens</h3></div>
-    <div class="card"><h3>Eaton</h3></div>
-    <div class="card"><h3>General Electric</h3></div>
-    <div class="card"><h3>LS Electric</h3></div>
-    <div class="card"><h3>Philips (Signify)</h3></div>
-    <div class="card"><h3>Osram</h3></div>
-    <div class="card"><h3>Sylvania</h3></div>
-    <div class="card"><h3>Iguzzini</h3></div>
-    <div class="card"><h3>Disano</h3></div>
-    <div class="card"><h3>Condunet (Ecuador)</h3></div>
-    <div class="card"><h3>Indura</h3></div>
-    <div class="card"><h3>Condumex</h3></div>
-    <div class="card"><h3>Viakon</h3></div>
-    <div class="card"><h3>Erico (nVent)</h3></div>
-    <div class="card"><h3>Franklin Electric</h3></div>
-    <div class="card"><h3>A. B. Chance</h3></div>
-    <div class="card"><h3>ICAR</h3></div>
-    <div class="card"><h3>Legrand</h3></div>
-    <div class="card"><h3>Bticino</h3></div>
-    <div class="card"><h3>TMC</h3></div>
-  </div>
-</section>
-
-<section id="nosotros" class="section">
-  <h2>Sobre Nosotros</h2>
-  <div class="about-text">
-    <p><strong>ALFTERIA</strong> es una empresa ecuatoriana especializada en soluciones integrales de ingeniería eléctrica. Nos enfocamos en calidad, seguridad y cumplimiento normativo para ofrecer resultados sobresalientes en cada proyecto.</p>
-  </div>
-</section>
-
-<section id="equipo" class="section">
-  <h2>Nuestro Equipo</h2>
-  <div class="about-text">
-    <p>Contamos con ingenieros y técnicos especializados, comprometidos con soluciones efectivas, sostenibles y adaptadas a cada cliente.</p>
-  </div>
-</section>
-
-<section id="contacto" class="section">
-  <h2>Contáctanos</h2>
-  <div class="contact-form">
-    <form onsubmit="mostrarGracias(event)">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo" required>
-      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-    </form>
-    <p id="mensajeGracias" style="display: none; text-align: center; margin-top: 15px; color: #00ffcc; font-weight: bold;">✅ Gracias por contactarnos. Te responderemos pronto.</p>
-  </div>
-</section>
-
-<footer>
-  &copy; 2025 ALFTERIA | Ingeniería Eléctrica Integral
-</footer>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -324,11 +183,6 @@
       });
     });
   });
-
-  function mostrarGracias(e) {
-    e.preventDefault();
-    document.getElementById('mensajeGracias').style.display = 'block';
-  }
 </script>
 
 </body>
