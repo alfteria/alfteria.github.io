@@ -156,7 +156,7 @@
     .whatsapp-button img {
       width: 30px;
     }
-    /* Estilos para las galerías modales (Industrial y Comercial) */
+    /* Estilos para las galerías modales (Residencial, Comercial, Industrial) */
     .modal {
       display: none;
       position: fixed;
@@ -278,7 +278,8 @@
   <section id="proyectos" class="section">
     <h2>Proyectos Realizados</h2>
     <div class="projects">
-      <div class="card">
+      <!-- Card “Residencial” con ID para galería -->
+      <div class="card" id="residencial-card">
         <h3>Residencial</h3>
         <p>Soluciones eléctricas eficientes y seguras para urbanizaciones y viviendas.</p>
       </div>
@@ -315,13 +316,29 @@
   </section>
 
 
+  <!-- ========================= GALLERÍA RESIDENCIAL ========================= -->
+  <div id="residencial-gallery" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Residencial</h2>
+      <div class="modal-grid">
+        <!-- Asegúrate de poner las imágenes residenciales en /images/ -->
+        <img src="images/residencial1.jpg" alt="Instalación residencial 1">
+        <img src="images/residencial2.jpg" alt="Instalación residencial 2">
+        <img src="images/residencial3.jpg" alt="Instalación residencial 3">
+        <img src="images/residencial4.jpg" alt="Instalación residencial 4">
+      </div>
+    </div>
+  </div>
+
+
   <!-- ========================= GALLERÍA COMERCIAL ========================= -->
   <div id="comercial-gallery" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Comercial</h2>
       <div class="modal-grid">
-        <!-- Coloca aquí tus propias imágenes dentro de /images/ -->
+        <!-- Asegúrate de poner las imágenes comerciales en /images/ -->
         <img src="images/comercial1.jpg" alt="Instalación comercial 1">
         <img src="images/comercial2.jpg" alt="Instalación comercial 2">
         <img src="images/comercial3.jpg" alt="Instalación comercial 3">
@@ -337,7 +354,7 @@
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Industrial</h2>
       <div class="modal-grid">
-        <!-- Coloca aquí tus propias imágenes dentro de /images/ -->
+        <!-- Asegúrate de poner las imágenes industriales en /images/ -->
         <img src="images/industrial1.jpg" alt="Instalación industrial 1">
         <img src="images/industrial2.jpg" alt="Instalación industrial 2">
         <img src="images/industrial3.jpg" alt="Instalación industrial 3">
@@ -423,6 +440,23 @@
           cardsServicio.forEach(c => { if (c !== card) c.classList.remove('active'); });
           this.classList.toggle('active');
         });
+      });
+
+      // Apertura y cierre de la galería Residencial
+      const residencialCard = document.getElementById('residencial-card');
+      const residencialModal = document.getElementById('residencial-gallery');
+      const closeResidencial = document.querySelectorAll('#residencial-gallery .close-modal')[0];
+
+      residencialCard.addEventListener('click', () => {
+        residencialModal.style.display = 'flex';
+      });
+      closeResidencial.addEventListener('click', () => {
+        residencialModal.style.display = 'none';
+      });
+      residencialModal.addEventListener('click', (e) => {
+        if (e.target === residencialModal) {
+          residencialModal.style.display = 'none';
+        }
       });
 
       // Apertura y cierre de la galería Comercial
