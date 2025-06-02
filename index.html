@@ -302,17 +302,10 @@
         <p>Soluciones para hospitales, escuelas, edificios gubernamentales y más.</p>
       </div>
 
-      <div class="card">
+      <!-- Card “Infraestructura urbana” -->
+      <div class="card" id="infra-card">
         <h3>Infraestructura urbana</h3>
         <p>Iluminación pública, redes subterráneas y sistemas de automatización urbana.</p>
-      </div>
-      <div class="card">
-        <h3>Energías renovables</h3>
-        <p>Implementación de sistemas solares fotovoltaicos y otras fuentes limpias.</p>
-      </div>
-      <div class="card">
-        <h3>Data centers y tecnología</h3>
-        <p>Soluciones eléctricas de alta disponibilidad para tecnología y telecomunicaciones.</p>
       </div>
     </div>
   </section>
@@ -377,6 +370,22 @@
         <img src="images/institucional2.jpg" alt="Instalación institucional 2">
         <img src="images/institucional3.jpg" alt="Instalación institucional 3">
         <img src="images/institucional4.jpg" alt="Instalación institucional 4">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================= GALLERÍA INFRAESTRUCTURA URBANA ========================= -->
+  <div id="infra-gallery" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Infraestructura urbana</h2>
+      <div class="modal-grid">
+        <!-- Imágenes de infraestructura urbana (colócalas en /images/) -->
+        <img src="images/infra1.jpg" alt="Infraestructura urbana 1">
+        <img src="images/infra2.jpg" alt="Infraestructura urbana 2">
+        <img src="images/infra3.jpg" alt="Infraestructura urbana 3">
+        <img src="images/infra4.jpg" alt="Infraestructura urbana 4">
       </div>
     </div>
   </div>
@@ -521,6 +530,22 @@
       institucionalModal.addEventListener('click', (e) => {
         if (e.target === institucionalModal) {
           institucionalModal.style.display = 'none';
+        }
+      });
+
+      // Apertura y cierre de la galería Infraestructura urbana
+      const infraCard = document.getElementById('infra-card');
+      const infraModal = document.getElementById('infra-gallery');
+      const closeInfra = document.querySelectorAll('#infra-gallery .close-modal')[0];
+      infraCard.addEventListener('click', () => {
+        infraModal.style.display = 'flex';
+      });
+      closeInfra.addEventListener('click', () => {
+        infraModal.style.display = 'none';
+      });
+      infraModal.addEventListener('click', (e) => {
+        if (e.target === infraModal) {
+          infraModal.style.display = 'none';
         }
       });
     });
