@@ -156,7 +156,7 @@
     .whatsapp-button img {
       width: 30px;
     }
-    /* Estilos para las galerías modales (Residencial, Comercial, Industrial) */
+    /* Estilos para las galerías modales */
     .modal {
       display: none;
       position: fixed;
@@ -278,28 +278,30 @@
   <section id="proyectos" class="section">
     <h2>Proyectos Realizados</h2>
     <div class="projects">
-      <!-- Card “Residencial” con ID para galería -->
+      <!-- Card “Residencial” -->
       <div class="card" id="residencial-card">
         <h3>Residencial</h3>
         <p>Soluciones eléctricas eficientes y seguras para urbanizaciones y viviendas.</p>
       </div>
 
-      <!-- Card “Comercial” con ID para galería -->
+      <!-- Card “Comercial” -->
       <div class="card" id="comercial-card">
         <h3>Comercial</h3>
         <p>Diseño e implementación de sistemas eléctricos para locales y centros comerciales.</p>
       </div>
 
-      <!-- Card “Industrial” con ID para galería -->
+      <!-- Card “Industrial” -->
       <div class="card" id="industrial-card">
         <h3>Industrial</h3>
         <p>Instalaciones eléctricas industriales adaptadas a entornos de producción.</p>
       </div>
 
-      <div class="card">
+      <!-- Card “Institucional / Público” -->
+      <div class="card" id="institucional-card">
         <h3>Institucional / Público</h3>
         <p>Soluciones para hospitales, escuelas, edificios gubernamentales y más.</p>
       </div>
+
       <div class="card">
         <h3>Infraestructura urbana</h3>
         <p>Iluminación pública, redes subterráneas y sistemas de automatización urbana.</p>
@@ -322,7 +324,7 @@
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Residencial</h2>
       <div class="modal-grid">
-        <!-- Asegúrate de poner las imágenes residenciales en /images/ -->
+        <!-- Imágenes residenciales (colócalas en /images/) -->
         <img src="images/residencial1.jpg" alt="Instalación residencial 1">
         <img src="images/residencial2.jpg" alt="Instalación residencial 2">
         <img src="images/residencial3.jpg" alt="Instalación residencial 3">
@@ -338,7 +340,7 @@
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Comercial</h2>
       <div class="modal-grid">
-        <!-- Asegúrate de poner las imágenes comerciales en /images/ -->
+        <!-- Imágenes comerciales (colócalas en /images/) -->
         <img src="images/comercial1.jpg" alt="Instalación comercial 1">
         <img src="images/comercial2.jpg" alt="Instalación comercial 2">
         <img src="images/comercial3.jpg" alt="Instalación comercial 3">
@@ -354,11 +356,27 @@
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Industrial</h2>
       <div class="modal-grid">
-        <!-- Asegúrate de poner las imágenes industriales en /images/ -->
+        <!-- Imágenes industriales (colócalas en /images/) -->
         <img src="images/industrial1.jpg" alt="Instalación industrial 1">
         <img src="images/industrial2.jpg" alt="Instalación industrial 2">
         <img src="images/industrial3.jpg" alt="Instalación industrial 3">
         <img src="images/industrial4.jpg" alt="Instalación industrial 4">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================= GALLERÍA INSTITUCIONAL / PÚBLICO ========================= -->
+  <div id="institucional-gallery" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Institucional / Público</h2>
+      <div class="modal-grid">
+        <!-- Imágenes institucionales (colócalas en /images/) -->
+        <img src="images/institucional1.jpg" alt="Instalación institucional 1">
+        <img src="images/institucional2.jpg" alt="Instalación institucional 2">
+        <img src="images/institucional3.jpg" alt="Instalación institucional 3">
+        <img src="images/institucional4.jpg" alt="Instalación institucional 4">
       </div>
     </div>
   </div>
@@ -446,7 +464,6 @@
       const residencialCard = document.getElementById('residencial-card');
       const residencialModal = document.getElementById('residencial-gallery');
       const closeResidencial = document.querySelectorAll('#residencial-gallery .close-modal')[0];
-
       residencialCard.addEventListener('click', () => {
         residencialModal.style.display = 'flex';
       });
@@ -463,7 +480,6 @@
       const comercialCard = document.getElementById('comercial-card');
       const comercialModal = document.getElementById('comercial-gallery');
       const closeComercial = document.querySelectorAll('#comercial-gallery .close-modal')[0];
-
       comercialCard.addEventListener('click', () => {
         comercialModal.style.display = 'flex';
       });
@@ -480,7 +496,6 @@
       const industrialCard = document.getElementById('industrial-card');
       const industrialModal = document.getElementById('industrial-gallery');
       const closeIndustrial = document.querySelectorAll('#industrial-gallery .close-modal')[0];
-
       industrialCard.addEventListener('click', () => {
         industrialModal.style.display = 'flex';
       });
@@ -490,6 +505,22 @@
       industrialModal.addEventListener('click', (e) => {
         if (e.target === industrialModal) {
           industrialModal.style.display = 'none';
+        }
+      });
+
+      // Apertura y cierre de la galería Institucional / Público
+      const institucionalCard = document.getElementById('institucional-card');
+      const institucionalModal = document.getElementById('institucional-gallery');
+      const closeInstitucional = document.querySelectorAll('#institucional-gallery .close-modal')[0];
+      institucionalCard.addEventListener('click', () => {
+        institucionalModal.style.display = 'flex';
+      });
+      closeInstitucional.addEventListener('click', () => {
+        institucionalModal.style.display = 'none';
+      });
+      institucionalModal.addEventListener('click', (e) => {
+        if (e.target === institucionalModal) {
+          institucionalModal.style.display = 'none';
         }
       });
     });
