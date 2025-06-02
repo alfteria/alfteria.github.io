@@ -156,7 +156,7 @@
     .whatsapp-button img {
       width: 30px;
     }
-    /* Estilos para la galería modal */
+    /* Estilos para las galerías modales (Industrial y Comercial) */
     .modal {
       display: none;
       position: fixed;
@@ -241,6 +241,8 @@
     <img src="https://img.icons8.com/ios-filled/100/ffffff/whatsapp.png" alt="WhatsApp">
   </a>
 
+
+  <!-- ========================= SERVICIOS ========================= -->
   <section id="servicios" class="section">
     <h2>Servicios</h2>
     <div class="services">
@@ -271,6 +273,8 @@
     </div>
   </section>
 
+
+  <!-- ========================= PROYECTOS ========================= -->
   <section id="proyectos" class="section">
     <h2>Proyectos Realizados</h2>
     <div class="projects">
@@ -278,15 +282,19 @@
         <h3>Residencial</h3>
         <p>Soluciones eléctricas eficientes y seguras para urbanizaciones y viviendas.</p>
       </div>
-      <div class="card">
+
+      <!-- Card “Comercial” con ID para galería -->
+      <div class="card" id="comercial-card">
         <h3>Comercial</h3>
         <p>Diseño e implementación de sistemas eléctricos para locales y centros comerciales.</p>
       </div>
-      <!-- Card Industrial con ID para abrir galería -->
+
+      <!-- Card “Industrial” con ID para galería -->
       <div class="card" id="industrial-card">
         <h3>Industrial</h3>
         <p>Instalaciones eléctricas industriales adaptadas a entornos de producción.</p>
       </div>
+
       <div class="card">
         <h3>Institucional / Público</h3>
         <p>Soluciones para hospitales, escuelas, edificios gubernamentales y más.</p>
@@ -306,21 +314,40 @@
     </div>
   </section>
 
-  <!-- Modal/Galería Industrial (con PlaceKitten para que cargue seguro) -->
+
+  <!-- ========================= GALLERÍA COMERCIAL ========================= -->
+  <div id="comercial-gallery" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Comercial</h2>
+      <div class="modal-grid">
+        <!-- Coloca aquí tus propias imágenes dentro de /images/ -->
+        <img src="images/comercial1.jpg" alt="Instalación comercial 1">
+        <img src="images/comercial2.jpg" alt="Instalación comercial 2">
+        <img src="images/comercial3.jpg" alt="Instalación comercial 3">
+        <img src="images/comercial4.jpg" alt="Instalación comercial 4">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================= GALLERÍA INDUSTRIAL ========================= -->
   <div id="industrial-gallery" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Industrial</h2>
       <div class="modal-grid">
-        <!-- 4 miniaturas de PlaceKitten 300×200 -->
-        <img src="https://placekitten.com/300/200" alt="Instalación industrial 1">
-        <img src="https://placekitten.com/301/200" alt="Instalación industrial 2">
-        <img src="https://placekitten.com/300/201" alt="Instalación industrial 3">
-        <img src="https://placekitten.com/301/201" alt="Instalación industrial 4">
+        <!-- Coloca aquí tus propias imágenes dentro de /images/ -->
+        <img src="images/industrial1.jpg" alt="Instalación industrial 1">
+        <img src="images/industrial2.jpg" alt="Instalación industrial 2">
+        <img src="images/industrial3.jpg" alt="Instalación industrial 3">
+        <img src="images/industrial4.jpg" alt="Instalación industrial 4">
       </div>
     </div>
   </div>
 
+
+  <!-- ========================= CLIENTES ========================= -->
   <section id="clientes" class="section">
     <h2>Marcas Certificadas con las que trabajamos</h2>
     <div class="clients">
@@ -348,6 +375,8 @@
     </div>
   </section>
 
+
+  <!-- ========================= SOBRE NOSOTROS ========================= -->
   <section id="nosotros" class="section">
     <h2>Sobre Nosotros</h2>
     <div class="about-text">
@@ -355,6 +384,8 @@
     </div>
   </section>
 
+
+  <!-- ========================= EQUIPO ========================= -->
   <section id="equipo" class="section">
     <h2>Nuestro Equipo</h2>
     <div class="about-text">
@@ -362,6 +393,8 @@
     </div>
   </section>
 
+
+  <!-- ========================= CONTACTO ========================= -->
   <section id="contacto" class="section">
     <h2>Contáctanos</h2>
     <div class="contact-form">
@@ -375,13 +408,15 @@
     </div>
   </section>
 
+
   <footer>
     &copy; 2025 ALFTERIA | Ingeniería Eléctrica Integral
   </footer>
 
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Toggle info en servicios
+      // Toggle info en Servicios
       const cardsServicio = document.querySelectorAll('.services .card');
       cardsServicio.forEach(card => {
         card.addEventListener('click', function () {
@@ -390,21 +425,34 @@
         });
       });
 
+      // Apertura y cierre de la galería Comercial
+      const comercialCard = document.getElementById('comercial-card');
+      const comercialModal = document.getElementById('comercial-gallery');
+      const closeComercial = document.querySelectorAll('#comercial-gallery .close-modal')[0];
+
+      comercialCard.addEventListener('click', () => {
+        comercialModal.style.display = 'flex';
+      });
+      closeComercial.addEventListener('click', () => {
+        comercialModal.style.display = 'none';
+      });
+      comercialModal.addEventListener('click', (e) => {
+        if (e.target === comercialModal) {
+          comercialModal.style.display = 'none';
+        }
+      });
+
       // Apertura y cierre de la galería Industrial
       const industrialCard = document.getElementById('industrial-card');
       const industrialModal = document.getElementById('industrial-gallery');
-      const closeBtn = document.querySelector('.close-modal');
+      const closeIndustrial = document.querySelectorAll('#industrial-gallery .close-modal')[0];
 
       industrialCard.addEventListener('click', () => {
         industrialModal.style.display = 'flex';
       });
-
-      // Cerrar al hacer clic en la X
-      closeBtn.addEventListener('click', () => {
+      closeIndustrial.addEventListener('click', () => {
         industrialModal.style.display = 'none';
       });
-
-      // Cerrar al hacer clic fuera del contenido de la galería
       industrialModal.addEventListener('click', (e) => {
         if (e.target === industrialModal) {
           industrialModal.style.display = 'none';
@@ -412,7 +460,7 @@
       });
     });
 
-    // Mostrar mensaje de agradecimiento en contacto
+    // Mostrar mensaje de agradecimiento en Contacto
     function mostrarGracias(e) {
       e.preventDefault();
       document.getElementById('mensajeGracias').style.display = 'block';
