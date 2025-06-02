@@ -4,22 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alfteria | Ingeniería Eléctrica Integral</title>
+
+  <!-- Font Awesome CDN (para los íconos) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-HzLeBuhoNPvSlZw+8EcUZ4uWmQ6Ivmkz1zRqt82wM9Cu3IxZ+oM6Ho0Lq0KGqUnypjFvWf9l7NJx1+71xR4e/Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="logo_alfteria.png">
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
     body::before {
       content: "";
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
                   url('https://images.unsplash.com/photo-1584270354949-1e446330ec7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')
                   no-repeat center center fixed;
-      background-size: cover;
-      z-index: -1;
+      background-size: cover; z-index: -1;
     }
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -44,6 +55,7 @@
       transition: color 0.3s ease;
     }
     nav a:hover { color: #ffffff; }
+
     header {
       text-align: center;
       padding: 60px 20px 30px;
@@ -58,23 +70,27 @@
       padding: 10px;
       border-radius: 10px;
     }
+
     h2 {
       text-align: center;
       margin: 50px 0 25px;
       font-size: 34px;
       color: #00bfff;
     }
+
     .section {
       max-width: 1200px;
       margin: auto;
       padding: 20px;
     }
+
     .services, .projects, .team, .clients {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 25px;
       margin-top: 20px;
     }
+
     .card {
       background: #0b2b48;
       padding: 25px;
@@ -83,10 +99,17 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 8px rgba(0,0,0,0.4);
       cursor: pointer;
+      position: relative;
     }
     .card:hover {
       transform: translateY(-6px);
       box-shadow: 0 10px 18px rgba(0,0,0,0.5);
+    }
+    .card i {
+      font-size: 40px;
+      color: #00bfff;
+      margin-bottom: 15px;
+      display: inline-block;
     }
     .card h3 {
       color: #00ccff;
@@ -106,9 +129,8 @@
     .card.active .info {
       display: block !important;
     }
-    .about-text, .contact-form {
-      padding: 20px;
-    }
+
+    .about-text, .contact-form { padding: 20px; }
     form input, form textarea {
       width: 100%;
       padding: 12px;
@@ -128,9 +150,8 @@
       font-size: 16px;
       cursor: pointer;
     }
-    form button:hover {
-      background-color: #009fcc;
-    }
+    form button:hover { background-color: #009fcc; }
+
     footer {
       text-align: center;
       padding: 25px;
@@ -139,6 +160,7 @@
       color: #aaa;
       border-top: 2px solid #00ccff;
     }
+
     .whatsapp-button {
       position: fixed;
       bottom: 20px;
@@ -153,18 +175,15 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
       z-index: 1001;
     }
-    .whatsapp-button img {
-      width: 30px;
-    }
+    .whatsapp-button img { width: 30px; }
+
     /* Estilos para las galerías modales */
     .modal {
       display: none;
       position: fixed;
       z-index: 1002;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
       background-color: rgba(0, 0, 0, 0.8);
       justify-content: center;
       align-items: center;
@@ -174,8 +193,7 @@
       background-color: #0b2b48;
       padding: 20px;
       border-radius: 10px;
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 90%; max-height: 90%;
       overflow-y: auto;
     }
     .modal-content img {
@@ -193,33 +211,25 @@
     }
     .close-modal {
       position: absolute;
-      top: 10px;
-      right: 15px;
+      top: 10px; right: 15px;
       font-size: 28px;
       font-weight: bold;
       color: #fff;
       cursor: pointer;
     }
+
     @media (max-width: 768px) {
       nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: flex; flex-direction: column; align-items: center;
       }
       nav a {
-        display: block;
-        margin: 10px 0;
-        font-size: 18px;
+        display: block; margin: 10px 0; font-size: 18px;
       }
-      header img {
-        max-width: 180px;
-      }
+      header img { max-width: 180px; }
       .services, .projects, .team, .clients {
         grid-template-columns: 1fr;
       }
-      .modal-content img {
-        max-width: 80%;
-      }
+      .modal-content img { max-width: 80%; }
     }
   </style>
 </head>
@@ -246,27 +256,39 @@
   <section id="servicios" class="section">
     <h2>Servicios</h2>
     <div class="services">
+      <!-- Diseño -->
       <div class="card" onclick="toggleInfo(this)">
+        <i class="fas fa-pencil-ruler"></i>
         <h3>Diseño</h3>
         <p>Planificación técnica, cálculos y planos eléctricos.</p>
       </div>
+      <!-- Fiscalización -->
       <div class="card" onclick="toggleInfo(this)">
+        <i class="fas fa-clipboard-check"></i>
         <h3>Fiscalización</h3>
         <p>Supervisión técnica y control de calidad en obra.</p>
       </div>
+      <!-- Media Tensión -->
       <div class="card" onclick="toggleInfo(this)">
+        <i class="fas fa-bolt"></i>
         <h3>Media Tensión</h3>
         <p>Redes de distribución para industrias y sectores urbanos.</p>
       </div>
+      <!-- Baja Tensión -->
       <div class="card" onclick="toggleInfo(this)">
+        <i class="fas fa-lightbulb"></i>
         <h3>Baja Tensión</h3>
         <p>Instalaciones interiores, iluminación y tomacorrientes.</p>
       </div>
+      <!-- Mantenimiento -->
       <div class="card" onclick="toggleInfo(this)">
+        <i class="fas fa-tools"></i>
         <h3>Mantenimiento</h3>
         <p>Soporte preventivo y correctivo.</p>
       </div>
+      <!-- Alquiler de Equipos -->
       <div class="card" onclick="toggleInfo(this)">
+        <i class="fas fa-box-open"></i>
         <h3>Alquiler de Equipos</h3>
         <p>Herramientas y equipos especializados.</p>
       </div>
@@ -278,44 +300,51 @@
   <section id="proyectos" class="section">
     <h2>Proyectos Realizados</h2>
     <div class="projects">
-      <!-- Card “Residencial” -->
+      <!-- Residencial -->
       <div class="card" id="residencial-card">
+        <i class="fas fa-home"></i>
         <h3>Residencial</h3>
         <p>Soluciones eléctricas eficientes y seguras para urbanizaciones y viviendas.</p>
       </div>
 
-      <!-- Card “Comercial” -->
+      <!-- Comercial -->
       <div class="card" id="comercial-card">
+        <i class="fas fa-store"></i>
         <h3>Comercial</h3>
         <p>Diseño e implementación de sistemas eléctricos para locales y centros comerciales.</p>
       </div>
 
-      <!-- Card “Industrial” -->
+      <!-- Industrial -->
       <div class="card" id="industrial-card">
+        <i class="fas fa-industry"></i>
         <h3>Industrial</h3>
         <p>Instalaciones eléctricas industriales adaptadas a entornos de producción.</p>
       </div>
 
-      <!-- Card “Institucional / Público” -->
+      <!-- Institucional / Público -->
       <div class="card" id="institucional-card">
+        <i class="fas fa-university"></i>
         <h3>Institucional / Público</h3>
         <p>Soluciones para hospitales, escuelas, edificios gubernamentales y más.</p>
       </div>
 
-      <!-- Card “Infraestructura urbana” -->
+      <!-- Infraestructura urbana -->
       <div class="card" id="infra-card">
+        <i class="fas fa-city"></i>
         <h3>Infraestructura urbana</h3>
         <p>Iluminación pública, redes subterráneas y sistemas de automatización urbana.</p>
       </div>
 
-      <!-- Card “Energías renovables” -->
+      <!-- Energías renovables -->
       <div class="card" id="renovable-card">
+        <i class="fas fa-solar-panel"></i>
         <h3>Energías renovables</h3>
         <p>Implementación de sistemas solares fotovoltaicos y otras fuentes limpias.</p>
       </div>
 
-      <!-- Card “Data centers y tecnología” -->
+      <!-- Data centers y tecnología -->
       <div class="card" id="datacenter-card">
+        <i class="fas fa-server"></i>
         <h3>Data centers y tecnología</h3>
         <p>Soluciones eléctricas de alta disponibilidad para tecnología y telecomunicaciones.</p>
       </div>
@@ -323,13 +352,13 @@
   </section>
 
 
-  <!-- ========================= GALLERÍA RESIDENCIAL ========================= -->
+  <!-- ========================= GALERÍAS ========================= -->
+  <!-- Residencial -->
   <div id="residencial-gallery" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Residencial</h2>
       <div class="modal-grid">
-        <!-- Imágenes residenciales (colócalas en /images/) -->
         <img src="images/residencial1.jpg" alt="Instalación residencial 1">
         <img src="images/residencial2.jpg" alt="Instalación residencial 2">
         <img src="images/residencial3.jpg" alt="Instalación residencial 3">
@@ -338,14 +367,12 @@
     </div>
   </div>
 
-
-  <!-- ========================= GALLERÍA COMERCIAL ========================= -->
+  <!-- Comercial -->
   <div id="comercial-gallery" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Comercial</h2>
       <div class="modal-grid">
-        <!-- Imágenes comerciales (colócalas en /images/) -->
         <img src="images/comercial1.jpg" alt="Instalación comercial 1">
         <img src="images/comercial2.jpg" alt="Instalación comercial 2">
         <img src="images/comercial3.jpg" alt="Instalación comercial 3">
@@ -354,14 +381,12 @@
     </div>
   </div>
 
-
-  <!-- ========================= GALLERÍA INDUSTRIAL ========================= -->
+  <!-- Industrial -->
   <div id="industrial-gallery" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Industrial</h2>
       <div class="modal-grid">
-        <!-- Imágenes industriales (colócalas en /images/) -->
         <img src="images/industrial1.jpg" alt="Instalación industrial 1">
         <img src="images/industrial2.jpg" alt="Instalación industrial 2">
         <img src="images/industrial3.jpg" alt="Instalación industrial 3">
@@ -370,14 +395,12 @@
     </div>
   </div>
 
-
-  <!-- ========================= GALLERÍA INSTITUCIONAL / PÚBLICO ========================= -->
+  <!-- Institucional / Público -->
   <div id="institucional-gallery" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Institucional / Público</h2>
       <div class="modal-grid">
-        <!-- Imágenes institucionales (colócalas en /images/) -->
         <img src="images/institucional1.jpg" alt="Instalación institucional 1">
         <img src="images/institucional2.jpg" alt="Instalación institucional 2">
         <img src="images/institucional3.jpg" alt="Instalación institucional 3">
@@ -386,14 +409,12 @@
     </div>
   </div>
 
-
-  <!-- ========================= GALLERÍA INFRAESTRUCTURA URBANA ========================= -->
+  <!-- Infraestructura urbana -->
   <div id="infra-gallery" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Infraestructura urbana</h2>
       <div class="modal-grid">
-        <!-- Imágenes de infraestructura urbana (colócalas en /images/) -->
         <img src="images/infra1.jpg" alt="Infraestructura urbana 1">
         <img src="images/infra2.jpg" alt="Infraestructura urbana 2">
         <img src="images/infra3.jpg" alt="Infraestructura urbana 3">
@@ -402,14 +423,12 @@
     </div>
   </div>
 
-
-  <!-- ========================= GALLERÍA ENERGÍAS RENOVABLES ========================= -->
+  <!-- Energías renovables -->
   <div id="renovable-gallery" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Energías renovables</h2>
       <div class="modal-grid">
-        <!-- Imágenes de energías renovables (colócalas en /images/) -->
         <img src="images/renovable1.jpg" alt="Energía renovable 1">
         <img src="images/renovable2.jpg" alt="Energía renovable 2">
         <img src="images/renovable3.jpg" alt="Energía renovable 3">
@@ -418,14 +437,12 @@
     </div>
   </div>
 
-
-  <!-- ========================= GALLERÍA DATA CENTERS Y TECNOLOGÍA ========================= -->
+  <!-- Data centers y tecnología -->
   <div id="datacenter-gallery" class="modal">
     <div class="modal-content">
       <span class="close-modal">&times;</span>
       <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Data centers y tecnología</h2>
       <div class="modal-grid">
-        <!-- Imágenes de data centers (colócalas en /images/) -->
         <img src="images/datacenter1.jpg" alt="Data center 1">
         <img src="images/datacenter2.jpg" alt="Data center 2">
         <img src="images/datacenter3.jpg" alt="Data center 3">
@@ -492,7 +509,9 @@
         <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
         <button type="submit">Enviar Mensaje</button>
       </form>
-      <p id="mensajeGracias" style="display: none; text-align: center; margin-top: 15px; color: #00ffcc; font-weight: bold;">✅ Gracias por contactarnos. Te responderemos pronto.</p>
+      <p id="mensajeGracias" style="display: none; text-align: center; margin-top: 15px; color: #00ffcc; font-weight: bold;">
+        ✅ Gracias por contactarnos. Te responderemos pronto.
+      </p>
     </div>
   </section>
 
@@ -513,55 +532,71 @@
         });
       });
 
-      // Apertura y cierre de la galería Residencial
+      // Apertura y cierre de galerías:
+
+      // Residencial
       const residencialCard = document.getElementById('residencial-card');
       const residencialModal = document.getElementById('residencial-gallery');
-      const closeResidencial = document.querySelectorAll('#residencial-gallery .close-modal')[0];
-      residencialCard.addEventListener('click', () => {
-        residencialModal.style.display = 'flex';
-      });
-      closeResidencial.addEventListener('click', () => {
-        residencialModal.style.display = 'none';
-      });
-      residencialModal.addEventListener('click', (e) => {
-        if (e.target === residencialModal) {
-          residencialModal.style.display = 'none';
-        }
-      });
+      const closeResidencial = residencialModal.querySelector('.close-modal');
+      residencialCard.addEventListener('click', () => { residencialModal.style.display = 'flex'; });
+      closeResidencial.addEventListener('click', () => { residencialModal.style.display = 'none'; });
+      residencialModal.addEventListener('click', (e) => { if (e.target === residencialModal) residencialModal.style.display = 'none'; });
 
-      // Apertura y cierre de la galería Comercial
+      // Comercial
       const comercialCard = document.getElementById('comercial-card');
       const comercialModal = document.getElementById('comercial-gallery');
-      const closeComercial = document.querySelectorAll('#comercial-gallery .close-modal')[0];
-      comercialCard.addEventListener('click', () => {
-        comercialModal.style.display = 'flex';
-      });
-      closeComercial.addEventListener('click', () => {
-        comercialModal.style.display = 'none';
-      });
-      comercialModal.addEventListener('click', (e) => {
-        if (e.target === comercialModal) {
-          comercialModal.style.display = 'none';
-        }
-      });
+      const closeComercial = comercialModal.querySelector('.close-modal');
+      comercialCard.addEventListener('click', () => { comercialModal.style.display = 'flex'; });
+      closeComercial.addEventListener('click', () => { comercialModal.style.display = 'none'; });
+      comercialModal.addEventListener('click', (e) => { if (e.target === comercialModal) comercialModal.style.display = 'none'; });
 
-      // Apertura y cierre de la galería Industrial
+      // Industrial
       const industrialCard = document.getElementById('industrial-card');
       const industrialModal = document.getElementById('industrial-gallery');
-      const closeIndustrial = document.querySelectorAll('#industrial-gallery .close-modal')[0];
-      industrialCard.addEventListener('click', () => {
-        industrialModal.style.display = 'flex';
-      });
-      closeIndustrial.addEventListener('click', () => {
-        industrialModal.style.display = 'none';
-      });
-      industrialModal.addEventListener('click', (e) => {
-        if (e.target === industrialModal) {
-          industrialModal.style.display = 'none';
-        }
-      });
+      const closeIndustrial = industrialModal.querySelector('.close-modal');
+      industrialCard.addEventListener('click', () => { industrialModal.style.display = 'flex'; });
+      closeIndustrial.addEventListener('click', () => { industrialModal.style.display = 'none'; });
+      industrialModal.addEventListener('click', (e) => { if (e.target === industrialModal) industrialModal.style.display = 'none'; });
 
-      // Apertura y cierre de la galería Institucional / Público
+      // Institucional / Público
       const institucionalCard = document.getElementById('institucional-card');
       const institucionalModal = document.getElementById('institucional-gallery');
-      const closeInstitucional = document.querySelectorAll('#institucional-gallery .close-modal')[0];
+      const closeInstitucional = institucionalModal.querySelector('.close-modal');
+      institucionalCard.addEventListener('click', () => { institucionalModal.style.display = 'flex'; });
+      closeInstitucional.addEventListener('click', () => { institucionalModal.style.display = 'none'; });
+      institucionalModal.addEventListener('click', (e) => { if (e.target === institucionalModal) institucionalModal.style.display = 'none'; });
+
+      // Infraestructura urbana
+      const infraCard = document.getElementById('infra-card');
+      const infraModal = document.getElementById('infra-gallery');
+      const closeInfra = infraModal.querySelector('.close-modal');
+      infraCard.addEventListener('click', () => { infraModal.style.display = 'flex'; });
+      closeInfra.addEventListener('click', () => { infraModal.style.display = 'none'; });
+      infraModal.addEventListener('click', (e) => { if (e.target === infraModal) infraModal.style.display = 'none'; });
+
+      // Energías renovables
+      const renovableCard = document.getElementById('renovable-card');
+      const renovableModal = document.getElementById('renovable-gallery');
+      const closeRenovable = renovableModal.querySelector('.close-modal');
+      renovableCard.addEventListener('click', () => { renovableModal.style.display = 'flex'; });
+      closeRenovable.addEventListener('click', () => { renovableModal.style.display = 'none'; });
+      renovableModal.addEventListener('click', (e) => { if (e.target === renovableModal) renovableModal.style.display = 'none'; });
+
+      // Data centers y tecnología
+      const datacenterCard = document.getElementById('datacenter-card');
+      const datacenterModal = document.getElementById('datacenter-gallery');
+      const closeDatacenter = datacenterModal.querySelector('.close-modal');
+      datacenterCard.addEventListener('click', () => { datacenterModal.style.display = 'flex'; });
+      closeDatacenter.addEventListener('click', () => { datacenterModal.style.display = 'none'; });
+      datacenterModal.addEventListener('click', (e) => { if (e.target === datacenterModal) datacenterModal.style.display = 'none'; });
+    });
+
+    // Mostrar mensaje de agradecimiento en Contacto
+    function mostrarGracias(e) {
+      e.preventDefault();
+      document.getElementById('mensajeGracias').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
