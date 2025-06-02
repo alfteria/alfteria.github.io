@@ -307,6 +307,18 @@
         <h3>Infraestructura urbana</h3>
         <p>Iluminación pública, redes subterráneas y sistemas de automatización urbana.</p>
       </div>
+
+      <!-- Card “Energías renovables” -->
+      <div class="card" id="renovable-card">
+        <h3>Energías renovables</h3>
+        <p>Implementación de sistemas solares fotovoltaicos y otras fuentes limpias.</p>
+      </div>
+
+      <!-- Card “Data centers y tecnología” -->
+      <div class="card" id="datacenter-card">
+        <h3>Data centers y tecnología</h3>
+        <p>Soluciones eléctricas de alta disponibilidad para tecnología y telecomunicaciones.</p>
+      </div>
     </div>
   </section>
 
@@ -386,6 +398,38 @@
         <img src="images/infra2.jpg" alt="Infraestructura urbana 2">
         <img src="images/infra3.jpg" alt="Infraestructura urbana 3">
         <img src="images/infra4.jpg" alt="Infraestructura urbana 4">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================= GALLERÍA ENERGÍAS RENOVABLES ========================= -->
+  <div id="renovable-gallery" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Energías renovables</h2>
+      <div class="modal-grid">
+        <!-- Imágenes de energías renovables (colócalas en /images/) -->
+        <img src="images/renovable1.jpg" alt="Energía renovable 1">
+        <img src="images/renovable2.jpg" alt="Energía renovable 2">
+        <img src="images/renovable3.jpg" alt="Energía renovable 3">
+        <img src="images/renovable4.jpg" alt="Energía renovable 4">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================= GALLERÍA DATA CENTERS Y TECNOLOGÍA ========================= -->
+  <div id="datacenter-gallery" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Data centers y tecnología</h2>
+      <div class="modal-grid">
+        <!-- Imágenes de data centers (colócalas en /images/) -->
+        <img src="images/datacenter1.jpg" alt="Data center 1">
+        <img src="images/datacenter2.jpg" alt="Data center 2">
+        <img src="images/datacenter3.jpg" alt="Data center 3">
+        <img src="images/datacenter4.jpg" alt="Data center 4">
       </div>
     </div>
   </div>
@@ -521,41 +565,3 @@
       const institucionalCard = document.getElementById('institucional-card');
       const institucionalModal = document.getElementById('institucional-gallery');
       const closeInstitucional = document.querySelectorAll('#institucional-gallery .close-modal')[0];
-      institucionalCard.addEventListener('click', () => {
-        institucionalModal.style.display = 'flex';
-      });
-      closeInstitucional.addEventListener('click', () => {
-        institucionalModal.style.display = 'none';
-      });
-      institucionalModal.addEventListener('click', (e) => {
-        if (e.target === institucionalModal) {
-          institucionalModal.style.display = 'none';
-        }
-      });
-
-      // Apertura y cierre de la galería Infraestructura urbana
-      const infraCard = document.getElementById('infra-card');
-      const infraModal = document.getElementById('infra-gallery');
-      const closeInfra = document.querySelectorAll('#infra-gallery .close-modal')[0];
-      infraCard.addEventListener('click', () => {
-        infraModal.style.display = 'flex';
-      });
-      closeInfra.addEventListener('click', () => {
-        infraModal.style.display = 'none';
-      });
-      infraModal.addEventListener('click', (e) => {
-        if (e.target === infraModal) {
-          infraModal.style.display = 'none';
-        }
-      });
-    });
-
-    // Mostrar mensaje de agradecimiento en Contacto
-    function mostrarGracias(e) {
-      e.preventDefault();
-      document.getElementById('mensajeGracias').style.display = 'block';
-    }
-  </script>
-
-</body>
-</html>
