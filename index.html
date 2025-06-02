@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="logo_alfteria.png">
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;}
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
     body::before {
       content: "";
       position: fixed;
@@ -15,7 +15,9 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1584270354949-1e446330ec7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+                  url('https://images.unsplash.com/photo-1584270354949-1e446330ec7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')
+                  no-repeat center center fixed;
       background-size: cover;
       z-index: -1;
     }
@@ -41,7 +43,7 @@
       font-size: 16px;
       transition: color 0.3s ease;
     }
-    nav a:hover {color: #ffffff;}
+    nav a:hover { color: #ffffff; }
     header {
       text-align: center;
       padding: 60px 20px 30px;
@@ -154,6 +156,50 @@
     .whatsapp-button img {
       width: 30px;
     }
+    /* Estilos para la galería modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1002;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      position: relative;
+      background-color: #0b2b48;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 90%;
+      max-height: 90%;
+      overflow-y: auto;
+    }
+    .modal-content img {
+      width: 100%;
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+    .modal-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .close-modal {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+    }
     @media (max-width: 768px) {
       nav {
         display: flex;
@@ -170,6 +216,9 @@
       }
       .services, .projects, .team, .clients {
         grid-template-columns: 1fr;
+      }
+      .modal-content img {
+        max-width: 80%;
       }
     }
   </style>
@@ -233,7 +282,8 @@
       <h3>Comercial</h3>
       <p>Diseño e implementación de sistemas eléctricos para locales y centros comerciales.</p>
     </div>
-    <div class="card">
+    <!-- Card Industrial con ID para abrir galería -->
+    <div class="card" id="industrial-card">
       <h3>Industrial</h3>
       <p>Instalaciones eléctricas industriales adaptadas a entornos de producción.</p>
     </div>
@@ -255,6 +305,22 @@
     </div>
   </div>
 </section>
+
+<!-- Modal/Galería Industrial -->
+<div id="industrial-gallery" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2 style="color:#00ccff; text-align:center; margin-bottom:15px;">Galería Industrial</h2>
+    <div class="modal-grid">
+      <!-- Reemplaza los siguientes src con las rutas reales de tus imágenes -->
+      <img src="industrial1.jpg" alt="Industrial 1">
+      <img src="industrial2.jpg" alt="Industrial 2">
+      <img src="industrial3.jpg" alt="Industrial 3">
+      <img src="industrial4.jpg" alt="Industrial 4">
+      <!-- Agrega tantas imágenes como necesites -->
+    </div>
+  </div>
+</div>
 
 <section id="clientes" class="section">
   <h2>Marcas Certificadas con las que trabajamos</h2>
@@ -316,6 +382,7 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Toggle info en servicios
     const cards = document.querySelectorAll('.services .card');
     cards.forEach(card => {
       card.addEventListener('click', function () {
@@ -323,8 +390,30 @@
         this.classList.toggle('active');
       });
     });
+
+    // Apertura y cierre de la galería Industrial
+    const industrialCard = document.getElementById('industrial-card');
+    const industrialModal = document.getElementById('industrial-gallery');
+    const closeBtn = document.querySelector('.close-modal');
+
+    industrialCard.addEventListener('click', () => {
+      industrialModal.style.display = 'flex';
+    });
+
+    // Cerrar al hacer clic en la X
+    closeBtn.addEventListener('click', () => {
+      industrialModal.style.display = 'none';
+    });
+
+    // Cerrar al hacer clic fuera del contenido de la galería
+    industrialModal.addEventListener('click', (e) => {
+      if (e.target === industrialModal) {
+        industrialModal.style.display = 'none';
+      }
+    });
   });
 
+  // Mostrar mensaje de agradecimiento en contacto
   function mostrarGracias(e) {
     e.preventDefault();
     document.getElementById('mensajeGracias').style.display = 'block';
