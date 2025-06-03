@@ -105,12 +105,15 @@
       transform: translateY(-6px);
       box-shadow: 0 10px 18px rgba(0,0,0,0.5);
     }
+
+    /* Estilos para los íconos de Font Awesome en sección Servicios */
     .card i {
       font-size: 40px;
       color: #00bfff;
       margin-bottom: 15px;
       display: inline-block;
     }
+
     .card h3 {
       color: #00ccff;
       margin-bottom: 10px;
@@ -261,36 +264,54 @@
         <i class="fas fa-pencil-ruler"></i>
         <h3>Diseño</h3>
         <p>Planificación técnica, cálculos y planos eléctricos.</p>
+        <div class="info">
+          Estudios de carga, diagramas unifilares, especificaciones y selección de materiales según normativa internacional.
+        </div>
       </div>
       <!-- Fiscalización -->
       <div class="card" onclick="toggleInfo(this)">
         <i class="fas fa-clipboard-check"></i>
         <h3>Fiscalización</h3>
         <p>Supervisión técnica y control de calidad en obra.</p>
+        <div class="info">
+          Aseguramos la ejecución conforme a planos, normas técnicas y cronograma establecido.
+        </div>
       </div>
       <!-- Media Tensión -->
       <div class="card" onclick="toggleInfo(this)">
         <i class="fas fa-bolt"></i>
         <h3>Media Tensión</h3>
         <p>Redes de distribución para industrias y sectores urbanos.</p>
+        <div class="info">
+          Diseño y montaje de acometidas, subestaciones, protecciones y transformadores.
+        </div>
       </div>
       <!-- Baja Tensión -->
       <div class="card" onclick="toggleInfo(this)">
         <i class="fas fa-lightbulb"></i>
         <h3>Baja Tensión</h3>
         <p>Instalaciones interiores, iluminación y tomacorrientes.</p>
+        <div class="info">
+          Cableado estructurado, tableros, puntos de fuerza y respaldo UPS.
+        </div>
       </div>
       <!-- Mantenimiento -->
       <div class="card" onclick="toggleInfo(this)">
         <i class="fas fa-tools"></i>
         <h3>Mantenimiento</h3>
         <p>Soporte preventivo y correctivo.</p>
+        <div class="info">
+          Planes periódicos, análisis termográficos y solución de fallas en sistemas eléctricos.
+        </div>
       </div>
       <!-- Alquiler de Equipos -->
       <div class="card" onclick="toggleInfo(this)">
         <i class="fas fa-box-open"></i>
         <h3>Alquiler de Equipos</h3>
         <p>Herramientas y equipos especializados.</p>
+        <div class="info">
+          Disponibilidad de equipos eléctricos para pruebas, respaldo o ejecución temporal.
+        </div>
       </div>
     </div>
   </section>
@@ -595,6 +616,11 @@
     function mostrarGracias(e) {
       e.preventDefault();
       document.getElementById('mensajeGracias').style.display = 'block';
+    }
+
+    // Opcional: función para alternar la expansión del texto .info
+    function toggleInfo(el) {
+      el.classList.toggle('active');
     }
   </script>
 
